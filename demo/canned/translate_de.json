@@ -1,0 +1,150 @@
+{
+  "_comment": "DEMO DATA: canned de machine translations for the bundled samples (written by hand, with deliberate mistakes for QA to find). A list means [first answer, answer in the repair round].",
+  "ps-001": {
+    "source": "Riptide 4/3 Chest-Zip Wetsuit",
+    "target": "Riptide 4/3 Chest-Zip-Neoprenanzug"
+  },
+  "ps-002": {
+    "source": "Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.",
+    "target": "Der Riptide 4/3 wurde für Sessions im kalten Wasser entwickelt und hält dich vom Dawn Patrol bis zum Sonnenuntergang warm."
+  },
+  "ps-003": {
+    "source": "⟦1⟧Key features:⟦/1⟧ 4/3 mm limestone neoprene, glued and blind-stitched seams and a quick-dry thermal lining.",
+    "target": "⟦1⟧Hauptmerkmale:⟦/1⟧ 4/3 mm Neopren auf Kalksteinbasis, verklebte und blindgenähte Nähte sowie ein schnell trocknendes Thermofutter."
+  },
+  "ps-004": {
+    "source": "Water temperature range: 12–16 °C.",
+    "target": "Wassertemperaturbereich: 12–16 °C."
+  },
+  "ps-005": {
+    "source": "Available in sizes XS to XXL.",
+    "target": "Erhältlich in den Größen XS bis XXL."
+  },
+  "ps-007": {
+    "source": "Drift Pro Snowboard",
+    "target": "Drift Pro Snowboard"
+  },
+  "ps-008": {
+    "source": "A directional twin with camber between the feet and rocker in the nose for effortless float in powder.",
+    "target": "Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder."
+  },
+  "ps-009": {
+    "source": "Recommended rider weight: 70–95 kg.",
+    "target": "Empfohlenes Fahrergewicht: 70–95 kg."
+  },
+  "ps-010": {
+    "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+    "target": "Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack."
+  },
+  "ps-011": {
+    "source": "Sintered base, waxed and ready to ride out of the box.",
+    "target": "Gesinterter Belag, gewachst und direkt einsatzbereit."
+  },
+  "ps-012": {
+    "source": "Trailblazer MIPS Mountain Bike Helmet",
+    "target": "Trailblazer MIPS Mountainbike-Helm"
+  },
+  "ps-013": {
+    "source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs.",
+    "target": "Wiegt nur 340 g und bietet 18 Belüftungsöffnungen, die dich bei langen Anstiegen kühl halten."
+  },
+  "ps-014": {
+    "source": "Includes a removable visor and a magnetic Fidlock® buckle.",
+    "target": "Mit abnehmbarem Visier und magnetischer Fidlock®-Schnalle."
+  },
+  "ps-015": {
+    "source": "Certified to EN 1078 and CPSC safety standards.",
+    "target": "Zertifiziert nach den Sicherheitsnormen EN 1078 und CPSC."
+  },
+  "ps-016": {
+    "source": "Size {size}: fits head circumference {min}–{max} cm.",
+    "target": "Größe {size}: passend für Kopfumfang {min}–{max} cm."
+  },
+  "ps-017": {
+    "source": "Shred 150 Dropper Post",
+    "target": "Shred 150 Vario-Sattelstütze"
+  },
+  "ps-018": {
+    "source": "Press the remote lever ⟦1⟧ to drop the saddle by up to 150 mm.",
+    "target": "Drücke den Remote-Hebel ⟦1⟧, um den Sattel um bis zu 150 mm abzusenken."
+  },
+  "ps-019": {
+    "source": "Compatible with 30.9 mm and 31.6 mm seat tubes.",
+    "target": "Kompatibel mit Sitzrohren mit 30,9 mm und 31,6 mm."
+  },
+  "ps-020": {
+    "source": "Service interval: every 200 hours of riding.",
+    "target": "Wartungsintervall: alle 200 Fahrstunden."
+  },
+  "ps-021": {
+    "source": "Waterproof rating: 20,000 mm / breathability: 15,000 g/m²/24 h.",
+    "target": "Wassersäule: 20.000 mm / Atmungsaktivität: 15.000 g/m²/24 h."
+  },
+  "ps-022": {
+    "source": "Ships within 2 business days.",
+    "target": "Versand innerhalb von 2 Arbeitstagen."
+  },
+  "ps-023": {
+    "source": "Swell Hunter 6'2\" Shortboard",
+    "target": "Swell Hunter 6'2\" Shortboard"
+  },
+  "ps-024": {
+    "source": "Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.",
+    "target": "Handgeshapt in Portugal,  mit Single-to-Double-Concave für Speed und Drive in den Turns."
+  },
+  "ps-025": {
+    "source": "Includes FCS II fin boxes; fins sold separately.",
+    "target": "Inklusive FCS II Finnenboxen; Finnen separat erhältlich."
+  },
+  "ps-027": {
+    "source": "Ships within 2 business days.",
+    "target": "Lieferung innerhalb von 2 Arbeitstagen."
+  },
+  "ps-028": {
+    "source": "Questions? Our riders are here to help: ⟦1⟧contact support⟦/1⟧.",
+    "target": "Fragen? Unsere Rider helfen dir gerne: ⟦1⟧Support kontaktieren⟦/1⟧."
+  },
+  "ps-030": {
+    "source": "Ride more. Worry less.",
+    "target": "Mehr fahren. Weniger sorgen."
+  },
+  "cart.title": {
+    "source": "Your cart",
+    "target": "Dein Warenkorb"
+  },
+  "cart.empty": {
+    "source": "Your cart is empty. Time to gear up!",
+    "target": "Dein Warenkorb ist leer. Zeit für neues Equipment!"
+  },
+  "cart.items": {
+    "source": "{count} items",
+    "target": [
+      "{anzahl} Artikel",
+      "{count} Artikel"
+    ]
+  },
+  "cart.checkout": {
+    "source": "Checkout",
+    "target": "Zur Kasse"
+  },
+  "product.add_to_cart": {
+    "source": "Add to cart",
+    "target": "In den Warenkorb"
+  },
+  "product.in_stock": {
+    "source": "In stock – ships in {days} days",
+    "target": "Auf Lager – Versand in {days} Tagen"
+  },
+  "product.size_guide": {
+    "source": "Size guide",
+    "target": "Größentabelle"
+  },
+  "product.reviews": {
+    "source": "{count} rider reviews",
+    "target": "{count} Rider-Bewertungen"
+  },
+  "promo.banner": {
+    "source": "<b>Summer swell sale:</b> up to 30% off wetsuits",
+    "target": "<b>Summer Swell Sale:</b> bis zu 30 % Rabatt auf Neoprenanzüge"
+  }
+}

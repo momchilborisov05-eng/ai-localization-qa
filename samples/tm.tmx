@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample translation memory (approved translations from earlier Northline projects). -->
+<tmx version="1.4">
+  <header creationtool="Phrase TMS" creationtoolversion="sample" segtype="sentence" o-tmf="Phrase" adminlang="en" srclang="en" datatype="plaintext"/>
+  <body>
+    <tu>
+      <tuv xml:lang="en"><seg>Free shipping on orders over €100.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Безплатна доставка за поръчки над 100 €.</seg></tuv>
+      <tuv xml:lang="de"><seg>Kostenloser Versand ab 100 € Bestellwert.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Tail pad and leash not included.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Тейл пад и лийш не са включени.</seg></tuv>
+      <tuv xml:lang="de"><seg>Tailpad und Leash nicht im Lieferumfang enthalten.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>30-day returns, no questions asked.</seg></tuv>
+      <tuv xml:lang="bg"><seg>30 дни за връщане без излишни въпроси.</seg></tuv>
+      <tuv xml:lang="de"><seg>30 Tage Rückgaberecht, ohne Wenn und Aber.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Available in sizes XS to XL.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Предлага се в размери от XS до XL.</seg></tuv>
+      <tuv xml:lang="de"><seg>Erhältlich in den Größen XS bis XL.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Recommended rider weight: 60–85 kg.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Препоръчително тегло на райдъра: 60–85 кг.</seg></tuv>
+      <tuv xml:lang="de"><seg>Empfohlenes Fahrergewicht: 60–85 kg.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Certified to EN 1078 safety standard.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Сертифицирана по стандарт за безопасност EN 1078.</seg></tuv>
+      <tuv xml:lang="de"><seg>Zertifiziert nach Sicherheitsnorm EN 1078.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Compatible with 30.9 mm seat tubes.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Съвместима с подседалкови тръби 30,9 мм.</seg></tuv>
+      <tuv xml:lang="de"><seg>Kompatibel mit Sitzrohren mit 30,9 mm.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Machine wash cold, hang to dry.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Пране в машина на студено, сушене на простор.</seg></tuv>
+      <tuv xml:lang="de"><seg>Kalt waschen, zum Trocknen aufhängen.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Rinse with fresh water after every session.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Изплаквай с прясна вода след всяка сесия.</seg></tuv>
+      <tuv xml:lang="de"><seg>Nach jeder Session mit Süßwasser ausspülen.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Lifetime warranty on the frame.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Доживотна гаранция на рамката.</seg></tuv>
+      <tuv xml:lang="de"><seg>Lebenslange Garantie auf den Rahmen.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Tool-free installation in under five minutes.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Монтаж без инструменти за по-малко от пет минути.</seg></tuv>
+      <tuv xml:lang="de"><seg>Werkzeuglose Montage in unter fünf Minuten.</seg></tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="en"><seg>Ideal for <bpt i="1">&lt;b&gt;</bpt>beginners<ept i="1">&lt;/b&gt;</ept> and intermediate riders.</seg></tuv>
+      <tuv xml:lang="bg"><seg>Идеален за <bpt i="1">&lt;b&gt;</bpt>начинаещи<ept i="1">&lt;/b&gt;</ept> и средно напреднали райдъри.</seg></tuv>
+      <tuv xml:lang="de"><seg>Ideal für <bpt i="1">&lt;b&gt;</bpt>Einsteiger<ept i="1">&lt;/b&gt;</ept> und fortgeschrittene Rider.</seg></tuv>
+    </tu>
+  </body>
+</tmx>

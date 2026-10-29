@@ -1,0 +1,17 @@
+{
+  "cart": {
+    "title": "Dein Warenkorb",
+    "empty": "Dein Warenkorb ist leer. Zeit für neues Equipment!",
+    "items": "{count} Artikel",
+    "checkout": "Zur Kasse"
+  },
+  "product": {
+    "add_to_cart": "In den Warenkorb",
+    "in_stock": "Auf Lager – Versand in {days} Tagen",
+    "size_guide": "Größentabelle",
+    "reviews": "{count} Rider-Bewertungen"
+  },
+  "promo": {
+    "banner": "<b>Summer Swell Sale:</b> bis zu 30 % Rabatt auf Neoprenanzüge"
+  }
+}

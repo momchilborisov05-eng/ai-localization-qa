@@ -1,0 +1,16 @@
+segment_id,target_lang,source,mt,post_edit,category,comment
+ps-001,bg,Riptide 4/3 Chest-Zip Wetsuit,Riptide 4/3 неопренов костюм с цип на гърдите,Riptide 4/3 неопренов костюм Chest-Zip,style,Shortened to fit the 40-character limit
+ps-002,bg,"Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.","Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от първите вълни на зазоряване до залеза.","Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от ранната сутрешна сесия до залеза.",style,"Dawn patrol = early session, not ""waves"""
+ps-010,bg,Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.,Комбинирай го с нашите ⟦1⟧Lockdown крепления⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.,Комбинирай го с нашите ⟦1⟧Lockdown автомати⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.,terminology,Glossary term
+ps-017,bg,Shred 150 Dropper Post,Shred 150 Dropper Post,Телескопична колона Shred 150,accuracy,Product type must be translated
+ps-019,bg,Compatible with 30.9 mm and 31.6 mm seat tubes.,"Съвместима с подседалкови тръби 30,9 мм и 31,8 мм.","Съвместима с подседалкови тръби 30,9 мм и 31,6 мм.",accuracy,Wrong diameter
+ps-022,bg,Ships within 2 business days.,Изпраща се в рамките на 2 работни дни.,Доставка до 2 работни дни.,style,Standard webshop wording
+ps-027,bg,Ships within 2 business days.,Изпраща се в рамките на 2 работни дни.,Доставка до 2 работни дни.,style,Standard webshop wording
+ps-030,bg,Ride more. Worry less.,Карай повече. Мисли по-малко.,Карай повече. Мисли по-малко.,none,
+ps-008,de,A directional twin with camber between the feet and rocker in the nose for effortless float in powder.,Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.,Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.,none,
+ps-010,de,Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.,Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.,Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.,none,
+ps-013,de,Weighs just 340 g and features 18 vents to keep you cool on long climbs.,"Wiegt nur 340 g und bietet 18 Belüftungsöffnungen, die dich bei langen Anstiegen kühl halten.","Wiegt nur 340 g und bietet 18 Lüftungsöffnungen, die dich bei langen Anstiegen kühl halten.",terminology,Usual term for helmets
+ps-020,de,Service interval: every 200 hours of riding.,Wartungsintervall: alle 200 Fahrstunden.,Wartungsintervall: alle 200 Betriebsstunden.,accuracy,Fahrstunden = driving lessons
+ps-022,de,Ships within 2 business days.,Versand innerhalb von 2 Arbeitstagen.,Versand innerhalb von 2 Werktagen.,terminology,Glossary: Werktage
+ps-024,de,Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.,"Handgeshapt in Portugal,  mit Single-to-Double-Concave für Speed und Drive in den Turns.","Handgeshapt in Portugal, mit Single-to-Double-Concave für Tempo und Drive in den Turns.",style,Double space; fewer anglicisms
+ps-027,de,Ships within 2 business days.,Lieferung innerhalb von 2 Arbeitstagen.,Versand innerhalb von 2 Werktagen.,terminology,Glossary + consistency with ps-022

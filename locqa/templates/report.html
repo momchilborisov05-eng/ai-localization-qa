@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Localization QA Report</title>
+<style>
+  :root {
+    --bg: #f4f6f9; --card: #ffffff; --ink: #0f172a; --muted: #64748b; --line: #e2e8f0;
+    --brand: #0369a1; --brand-2: #0891b2; --err: #dc2626; --err-bg: #fef2f2; --warn: #b45309; --warn-bg: #fffbeb;
+    --rev: #7c3aed; --rev-bg: #f5f3ff; --ok: #15803d; --ok-bg: #f0fdf4;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.5 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  header { background: linear-gradient(120deg, #0c4a6e, #0369a1 60%, #0891b2); color: #fff; padding: 18px 28px 0; }
+  .top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .logo { width: 34px; height: 34px; border-radius: 9px; background: rgba(255,255,255,.18); display: grid; place-items: center; font-weight: 700; }
+  h1 { margin: 0; font-size: 20px; letter-spacing: -.2px; }
+  .meta { opacity: .85; font-size: 12.5px; }
+  .badge-demo { margin-left: auto; background: #f59e0b; color: #111827; font-weight: 700; font-size: 12px; padding: 4px 10px; border-radius: 999px; }
+  nav { display: flex; gap: 4px; margin-top: 14px; overflow-x: auto; }
+  nav button { background: transparent; border: 0; color: #e0f2fe; padding: 9px 14px; font: inherit; font-weight: 600; cursor: pointer; border-radius: 8px 8px 0 0; white-space: nowrap; }
+  nav button.active { background: var(--bg); color: var(--ink); }
+  main { padding: 20px 28px 40px; max-width: 1400px; margin: 0 auto; }
+  .demo-note { background: var(--warn-bg); border: 1px solid #fde68a; color: #92400e; padding: 8px 12px; border-radius: 8px; margin-bottom: 16px; font-size: 13px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .kpi { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+  .kpi .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .4px; }
+  .kpi .value { font-size: 24px; font-weight: 700; margin-top: 2px; }
+  .kpi .sub { color: var(--muted); font-size: 12px; }
+  .pill { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 700; vertical-align: middle; }
+  .pill.pass { background: var(--ok-bg); color: var(--ok); } .pill.fail { background: var(--err-bg); color: var(--err); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+  .panel { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .panel h2 { font-size: 14px; margin: 0 0 10px; }
+  .bar { display: grid; grid-template-columns: 150px 1fr 34px; align-items: center; gap: 8px; margin: 5px 0; font-size: 13px; }
+  .bar .track { background: #f1f5f9; border-radius: 4px; height: 10px; overflow: hidden; }
+  .bar .fill { height: 100%; border-radius: 4px; background: var(--brand-2); }
+  .bar .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+  .filters input, .filters select { font: inherit; padding: 6px 9px; border: 1px solid var(--line); border-radius: 7px; background: #fff; }
+  .filters input { min-width: 220px; }
+  .count { color: var(--muted); margin-left: auto; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card); }
+  .tablewrap { border: 1px solid var(--line); border-radius: 10px; overflow: auto; }
+  th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .4px; color: var(--muted); background: #f8fafc; padding: 8px 10px; border-bottom: 1px solid var(--line); position: sticky; top: 0; }
+  td { padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.id { font-family: Consolas, monospace; font-size: 12px; color: var(--muted); white-space: nowrap; }
+  td.txt { width: 32%; }
+  .tk { display: inline-block; background: #e0f2fe; color: #075985; font: 600 11px Consolas, monospace; padding: 0 4px; border-radius: 4px; margin: 0 1px; }
+  .ph { background: #ede9fe; color: #5b21b6; font-family: Consolas, monospace; font-size: 12.5px; border-radius: 3px; padding: 0 2px; }
+  .origin { font-size: 11.5px; font-weight: 700; padding: 1px 7px; border-radius: 999px; white-space: nowrap; }
+  .origin.tm { background: var(--ok-bg); color: var(--ok); } .origin.mt { background: #e0f2fe; color: #075985; } .origin.existing { background: #f1f5f9; color: #334155; }
+  .small { font-size: 12px; color: var(--muted); }
+  .issue { margin: 3px 0; padding: 4px 8px; border-radius: 6px; font-size: 12.5px; }
+  .issue.error { background: var(--err-bg); color: #991b1b; } .issue.warning { background: var(--warn-bg); color: #92400e; }
+  .issue.review { background: var(--rev-bg); color: #4c1d95; }
+  .issue b { font-weight: 700; }
+  .fix { display: block; margin-top: 2px; color: #334155; }
+  .clean { color: var(--ok); font-size: 12.5px; font-weight: 600; }
+  .len.over { color: var(--err); font-weight: 700; }
+  del { background: #fee2e2; color: #991b1b; text-decoration: line-through; }
+  ins { background: #dcfce7; color: #166534; text-decoration: none; }
+  .hidden { display: none; }
+  @media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } main, header { padding-left: 16px; padding-right: 16px; } td.txt { width: auto; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="top">
+    <div class="logo">QA</div>
+    <div><h1>AI Localization QA</h1><div class="meta" id="meta"></div></div>
+    <span class="badge-demo hidden" id="demoBadge">DEMO MODE</span>
+  </div>
+  <nav id="tabs"></nav>
+</header>
+<main id="main"></main>
+<script id="data" type="application/json">__REPORT_DATA__</script>
+<script>
+const R = JSON.parse(document.getElementById("data").textContent);
+const LANG = {bg: "Bulgarian", de: "German", fr: "French", es: "Spanish", it: "Italian", en: "English"};
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+const base = p => String(p).split(/[\\/]/).pop();
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+
+function fmt(text) {
+  // escape, then show tag tokens as chips and placeholders highlighted
+  let s = esc(text);
+  s = s.replace(/\{\{?[\w.]+\}?\}|%(?:\d+\$)?[sdif@]|&lt;\/?[a-zA-Z][^&]*?&gt;/g, m => `<span class="ph">${m}</span>`);
+  return s.replace(/⟦(\/?\d+)⟧/g, (_, n) => `<span class="tk">${n}</span>`);
+}
+
+function kpi(label, value, sub = "") {
+  return `<div class="kpi"><div class="label">${label}</div><div class="value">${value}</div><div class="sub">${sub}</div></div>`;
+}
+
+function bars(entries, color) {
+  const max = Math.max(1, ...entries.map(e => e[1]));
+  if (!entries.length) return `<div class="clean">No findings</div>`;
+  return entries.map(([label, n]) => `<div class="bar"><span>${esc(label)}</span><div class="track"><div class="fill" style="width:${pct(n, max)}%;background:${color || "var(--brand-2)"}"></div></div><span class="n">${n}</span></div>`).join("");
+}
+
+document.getElementById("meta").textContent =
+  `Generated ${R.generated_at} · model: ${R.model} · v${R.version}`;
+if (R.demo) document.getElementById("demoBadge").classList.remove("hidden");
+
+const tabs = R.runs.map((run, i) => ({label: `${base(run.input_file)} → ${run.target_lang.toUpperCase()}`, render: () => renderRun(run)}));
+if (R.feedback) tabs.push({label: "Linguist feedback", render: renderFeedback});
+const nav = document.getElementById("tabs");
+tabs.forEach((t, i) => {
+  const b = document.createElement("button");
+  b.textContent = t.label;
+  b.onclick = () => select(i);
+  nav.appendChild(b);
+});
+function select(i) {
+  [...nav.children].forEach((b, j) => b.classList.toggle("active", i === j));
+  tabs[i].render();
+}
+
+function demoNote() {
+  return R.demo ? `<div class="demo-note"><b>Demo mode:</b> translations and review findings are canned responses stored in the repository (no API calls). They include deliberate mistakes so the QA checks have something to find. QA checks, TM matching and scoring are computed live.</div>` : "";
+}
+
+function renderRun(run) {
+  const s = run.summary, m = s.mqm;
+  const lang = LANG[run.target_lang] || run.target_lang;
+  const live = !R.demo && s.usage && s.usage.requests;
+  const usage = live ? `${s.usage.requests} requests · ${(s.usage.cached_tokens || 0).toLocaleString()} cached input` : (R.demo ? `demo: ${s.usage.requests || 0} canned answers, no API calls` : "no LLM calls");
+  const tokens = live ? (s.usage.input_tokens + s.usage.output_tokens).toLocaleString() : "—";
+  const checks = Object.entries(s.qa_by_check).map(([k, n]) => [R.check_labels[k] || k, n]);
+  const cats = m ? Object.entries(m.by_category).filter(e => e[1]).map(([k, n]) => [k.replace("_", " "), n]) : [];
+  const sev = m ? Object.entries(m.by_severity).map(([k, n]) => [k, n]) : [];
+  document.getElementById("main").innerHTML = `
+    ${demoNote()}
+    <div class="kpis">
+      ${kpi("Segments", s.segments, `${s.source_words} source words · ${lang}`)}
+      ${kpi("TM leverage", `${pct(s.tm_reused, s.segments)}%`, `${s.tm_reused} reused · ${s.mt_with_fuzzy} MT + fuzzy ref · ${s.mt_new} new MT`)}
+      ${kpi("QA errors", `<span style="color:${s.qa_errors ? "var(--err)" : "var(--ok)"}">${s.qa_errors}</span>`, `${s.qa_warnings} warning${s.qa_warnings === 1 ? "" : "s"} · ${s.segments_with_errors} segment${s.segments_with_errors === 1 ? "" : "s"} flagged`)}
+      ${m ? kpi("MQM score", `${m.score.toFixed(1)} <span class="pill ${m.passed ? "pass" : "fail"}">${m.passed ? "PASS" : "FAIL"}</span>`, `${m.penalty} penalty pts · threshold ${m.threshold}`) : kpi("MQM score", "—", "review not run")}
+      ${kpi("Tag repairs", s.repaired, "segments fixed after validation")}
+      ${kpi("Tokens", tokens, usage)}
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>Automatic QA findings by check</h2>${bars(checks)}</div>
+      <div class="panel"><h2>LLM review (MQM) by category</h2>${m ? bars(cats, "var(--rev)") + `<div class="small" style="margin-top:8px">Severity: ${sev.map(([k, n]) => `${k} ${n}`).join(" · ")} · weights minor 1 / major 5 / critical 25</div>` : `<div class="small">Review not run.</div>`}</div>
+    </div>
+    <div class="filters">
+      <input id="q" placeholder="Search source, target or ID">
+      <select id="fShow"><option value="all">All segments</option><option value="issues">Any issue</option><option value="error">QA errors</option><option value="warning">QA warnings</option><option value="review">Review findings</option><option value="clean">Clean</option></select>
+      <select id="fCheck"><option value="">Any check</option>${Object.keys(s.qa_by_check).map(k => `<option value="${k}">${esc(R.check_labels[k] || k)}</option>`).join("")}</select>
+      <select id="fOrigin"><option value="">TM + MT</option><option value="tm">TM reused</option><option value="mt">Machine translated</option><option value="existing">Existing</option></select>
+      <span class="count" id="count"></span>
+    </div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>ID</th><th>Source</th><th>Target</th><th>Match</th><th>Findings</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+    <p class="small">Output file: ${esc(run.output_file || "(QA only)")}</p>`;
+  const draw = () => drawRows(run);
+  ["q", "fShow", "fCheck", "fOrigin"].forEach(id => document.getElementById(id).addEventListener("input", draw));
+  draw();
+}
+
+function drawRows(run) {
+  const q = document.getElementById("q").value.toLowerCase();
+  const show = document.getElementById("fShow").value, check = document.getElementById("fCheck").value, origin = document.getElementById("fOrigin").value;
+  const rows = run.segments.filter(seg => {
+    const hasErr = seg.qa.some(i => i.severity === "error"), hasWarn = seg.qa.some(i => i.severity === "warning"), hasRev = seg.review.length > 0;
+    if (show === "issues" && !(seg.qa.length || hasRev)) return false;
+    if (show === "error" && !hasErr) return false;
+    if (show === "warning" && !hasWarn) return false;
+    if (show === "review" && !hasRev) return false;
+    if (show === "clean" && (seg.qa.length || hasRev)) return false;
+    if (check && !seg.qa.some(i => i.check === check)) return false;
+    if (origin && seg.origin !== origin) return false;
+    if (q && !(seg.id + " " + seg.source + " " + seg.target).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  document.getElementById("count").textContent = `Showing ${rows.length} of ${run.segments.length}`;
+  document.getElementById("rows").innerHTML = rows.map(seg => {
+    const match = seg.origin === "tm" ? `<span class="origin tm">TM ${seg.tm_score}%</span>` : seg.origin === "mt" ? `<span class="origin mt">MT</span>${seg.tm_score ? `<div class="small">fuzzy ref ${seg.tm_score}%</div>` : ""}` : `<span class="origin existing">existing</span>`;
+    const len = seg.max_chars ? `<div class="small len ${seg.length > seg.max_chars ? "over" : ""}">${seg.length}/${seg.max_chars} chars</div>` : "";
+    const issues = seg.qa.map(i => `<div class="issue ${i.severity}"><b>${esc(R.check_labels[i.check] || i.check)}:</b> ${esc(i.message)}</div>`).join("")
+      + seg.review.map(i => `<div class="issue review"><b>MQM ${esc(i.severity)} · ${esc(i.category.replace("_", " "))}:</b> ${esc(i.explanation)}<span class="fix">Fix: ${fmt(i.suggested_fix)}</span></div>`).join("");
+    return `<tr><td class="id">${esc(seg.id)}${seg.repaired ? `<div class="small" title="Tag/placeholder validation failed on the first answer; fixed in the repair round">repaired</div>` : ""}</td>
+      <td class="txt">${fmt(seg.source)}${seg.note ? `<div class="small">${esc(seg.note)}</div>` : ""}</td>
+      <td class="txt">${fmt(seg.target)}${len}</td><td>${match}</td>
+      <td>${issues || `<span class="clean">✓ clean</span>`}</td></tr>`;
+  }).join("");
+}
+
+function wordDiff(a, b) {
+  const A = a.split(/(\s+)/), B = b.split(/(\s+)/);
+  const dp = Array.from({length: A.length + 1}, () => new Array(B.length + 1).fill(0));
+  for (let i = A.length - 1; i >= 0; i--) for (let j = B.length - 1; j >= 0; j--)
+    dp[i][j] = A[i] === B[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  let i = 0, j = 0, out = "";
+  while (i < A.length && j < B.length) {
+    if (A[i] === B[j]) { out += esc(A[i]); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) { out += `<del>${esc(A[i])}</del>`; i++; }
+    else { out += `<ins>${esc(B[j])}</ins>`; j++; }
+  }
+  while (i < A.length) out += `<del>${esc(A[i++])}</del>`;
+  while (j < B.length) out += `<ins>${esc(B[j++])}</ins>`;
+  return out.replace(/⟦(\/?\d+)⟧/g, (_, n) => `<span class="tk">${n}</span>`);
+}
+
+function renderFeedback() {
+  const F = R.feedback, o = F.metrics.overall;
+  const langs = Object.entries(F.metrics.languages);
+  const qa = F.metrics.qa_before_after;
+  const lev = F.tm_leverage || {};
+  const effortRows = Object.entries(o.effort).map(([k, n]) => [k, n]);
+  const cats = Object.entries(o.categories);
+  document.getElementById("main").innerHTML = `
+    ${R.demo ? `<div class="demo-note"><b>Demo mode:</b> the post-edits are simulated linguist corrections stored in <code>samples/linguist_feedback.csv</code>. All metrics below are computed from that file.</div>` : ""}
+    <div class="kpis">
+      ${kpi("Post-edited segments", o.segments, langs.map(([l, a]) => `${l.toUpperCase()} ${a.segments}`).join(" · "))}
+      ${kpi("Unchanged MT", `${o.unchanged_pct}%`, "accepted as-is by the linguist")}
+      ${kpi("Avg edit distance", o.avg_normalized_edit_distance.toFixed(3), "normalized, characters (0 = no change)")}
+      ${kpi("Avg edit rate", o.avg_edit_rate.toFixed(3), "word edits / post-edit words (TER-like)")}
+      ${kpi("TM updated", `+${F.tm_update.added}`, `${F.tm_update.updated} updated · ${F.tm_update.unchanged} unchanged`)}
+      ${kpi("Glossary candidates", F.glossary_candidates.length, `${F.glossary_candidates.filter(c => c.status === "glossary-not-followed").length} existing terms not followed by MT`)}
+    </div>
+    <div class="grid2">
+      <div class="panel"><h2>Measurable improvement</h2>
+        <table><thead><tr><th>Language</th><th>QA errors MT → post-edit</th><th>TM exact matches before → after</th></tr></thead><tbody>
+        ${Object.keys(qa).map(l => `<tr><td>${l.toUpperCase()}</td><td><b>${qa[l].mt_errors}</b> → <b style="color:var(--ok)">${qa[l].post_edit_errors}</b> <span class="small">(warnings ${qa[l].mt_warnings} → ${qa[l].post_edit_warnings})</span></td><td>${lev[l] ? `<b>${lev[l].before.exact}</b> → <b style="color:var(--ok)">${lev[l].after.exact}</b> <span class="small">of ${lev[l].segments} segments</span>` : "—"}</td></tr>`).join("")}
+        </tbody></table></div>
+      <div class="panel"><h2>Post-edit effort</h2>${bars(effortRows)}<h2 style="margin-top:12px">Error categories (linguist)</h2>${bars(cats, "var(--rev)")}</div>
+    </div>
+    <div class="panel" style="margin-bottom:16px"><h2>Glossary candidates</h2>
+      <table><thead><tr><th>Lang</th><th>MT term</th><th>Post-edit term</th><th>Seen</th><th>Status</th><th>Segments</th></tr></thead><tbody>
+      ${F.glossary_candidates.map(c => `<tr><td>${c.target_lang.toUpperCase()}</td><td><del>${esc(c.mt_term)}</del></td><td><ins>${esc(c.post_edit_term)}</ins></td><td>${c.occurrences}×</td><td>${c.status === "glossary-not-followed" ? `<span class="issue error" style="display:inline-block">existing term “${esc(c.glossary_term)}” not followed</span>` : `<span class="issue review" style="display:inline-block">new candidate</span>`}</td><td class="small">${c.segments.join(", ")}</td></tr>`).join("") || `<tr><td colspan="6" class="small">No candidates.</td></tr>`}
+      </tbody></table></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>ID</th><th>Lang</th><th>Source</th><th>MT → post-edit</th><th>Effort</th><th>Category</th></tr></thead><tbody>
+      ${F.metrics.segments.map(s => `<tr><td class="id">${esc(s.segment_id)}</td><td>${s.target_lang.toUpperCase()}</td><td class="txt">${fmt(s.source)}</td><td class="txt">${wordDiff(s.mt, s.post_edit)}${s.comment ? `<div class="small">${esc(s.comment)}</div>` : ""}</td><td>${s.effort}<div class="small">ED ${s.normalized_edit_distance}</div></td><td class="small">${esc(s.category)}</td></tr>`).join("")}
+      </tbody></table></div>`;
+}
+
+// Optional deep link, e.g. report.html#tab=1&show=issues
+const hash = new URLSearchParams(location.hash.slice(1));
+select(Math.min(Number(hash.get("tab")) || 0, tabs.length - 1));
+const showSel = document.getElementById("fShow");
+if (showSel && hash.get("show")) { showSel.value = hash.get("show"); showSel.dispatchEvent(new Event("input")); }
+</script>
+</body>
+</html>

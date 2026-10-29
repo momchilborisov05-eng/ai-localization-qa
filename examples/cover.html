@@ -1,0 +1,70 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>AI Localization QA</title>
+<style>
+  body { margin:0; width:1280px; height:720px; overflow:hidden; font-family:"Segoe UI",system-ui,sans-serif;
+         background:linear-gradient(135deg,#0c4a6e,#0369a1 50%,#0891b2); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  h1 { margin:0 0 6px; font-size:52px; letter-spacing:-1px; }
+  p.sub { margin:0 0 24px; font-size:21px; opacity:.92; }
+  .row { display:flex; gap:22px; align-items:flex-start; }
+  .term { width:610px; background:#0f172a; border-radius:12px; box-shadow:0 20px 50px rgba(0,0,0,.4); overflow:hidden; }
+  .bar { background:#1e293b; padding:9px 12px; display:flex; gap:7px; }
+  .bar i { width:11px; height:11px; border-radius:50%; display:block; }
+  pre { margin:0; padding:14px 16px; font: 13.2px/1.6 Consolas, monospace; color:#e2e8f0; white-space:pre-wrap; }
+  .g { color:#4ade80; } .y { color:#facc15; } .m { color:#94a3b8; } .r { color:#f87171; } .c { color:#67e8f9; }
+  .card { width:520px; background:#fff; color:#1f2937; border-radius:10px; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,.4); font-size:13.5px; }
+  .card .t { background:#0f172a; color:#fff; padding:9px 12px; font-weight:600; display:flex; justify-content:space-between; }
+  .card .t span { font-weight:400; opacity:.75; }
+  .kpis { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid #e5e7eb; }
+  .kpis div { padding:9px 12px; border-right:1px solid #e5e7eb; }
+  .kpis div:last-child { border-right:0; }
+  .kpis b { display:block; font-size:21px; }
+  .kpis small { color:#64748b; font-size:11px; text-transform:uppercase; letter-spacing:.4px; }
+  table { border-collapse:collapse; width:100%; }
+  td { padding:6px 10px; border-bottom:1px solid #eef2f7; vertical-align:top; }
+  td.id { font-family:Consolas,monospace; color:#64748b; font-size:12px; white-space:nowrap; }
+  .e { display:inline-block; background:#fef2f2; color:#b91c1c; border-radius:5px; padding:1px 6px; font-weight:600; font-size:12px; }
+  .w { display:inline-block; background:#fffbeb; color:#b45309; border-radius:5px; padding:1px 6px; font-weight:600; font-size:12px; }
+  .v { display:inline-block; background:#f5f3ff; color:#6d28d9; border-radius:5px; padding:1px 6px; font-weight:600; font-size:12px; }
+  .fail { color:#b91c1c; } .pass { color:#15803d; }
+  .tags { margin-top:24px; display:flex; gap:10px; }
+  .tags span { background:rgba(255,255,255,.18); padding:7px 14px; border-radius:20px; font-size:16px; }
+</style></head><body>
+<h1>AI Localization QA</h1>
+<p class="sub">Claude translation with TM, glossary and style guide, automatic QA, MQM review and a linguist feedback loop</p>
+<div class="row">
+  <div class="term">
+    <div class="bar"><i style="background:#ef4444"></i><i style="background:#eab308"></i><i style="background:#22c55e"></i></div>
+<pre><span class="g">$</span> python -m locqa demo
+
+<span class="c">1) Translate + QA + MQM review</span>
+product_copy.en.xlf -> bg: 30 segments | TM reused 3
+  QA <span class="r">5 errors</span>, 1 warning | 1 repaired | MQM <span class="r">85.7 FAIL</span>
+product_copy.en.xlf -> de: 30 segments | TM reused 3
+  QA <span class="y">2 errors</span>, 3 warnings | MQM <span class="g">95.1 PASS</span>
+
+<span class="c">2) Linguist feedback loop</span>
+15 post-edited segments | unchanged 20.0%
+bg: QA errors MT 4 -> post-edit <span class="g">0</span> | TM exact <span class="g">3 -> 11</span> of 30
+de: QA errors MT 2 -> post-edit <span class="g">0</span> | TM exact <span class="g">3 -> 10</span> of 30
+glossary [de] Arbeitstagen -> Werktagen
+  <span class="m">(existing term 'business days' not followed by MT)</span></pre>
+  </div>
+  <div class="card">
+    <div class="t">report.html · product_copy → BG <span>demo data</span></div>
+    <div class="kpis">
+      <div><small>TM leverage</small><b>10%</b></div>
+      <div><small>QA errors</small><b class="fail">5</b></div>
+      <div><small>MQM score</small><b class="fail">85.7</b></div>
+    </div>
+    <table>
+      <tr><td class="id">ps-019</td><td><span class="e">Numbers</span> 31.6 missing, 31,8 not in source</td></tr>
+      <tr><td class="id">ps-019</td><td><span class="v">MQM critical</span> wrong seat-tube diameter</td></tr>
+      <tr><td class="id">ps-010</td><td><span class="e">Glossary</span> 'binding' should be 'автомати'</td></tr>
+      <tr><td class="id">ps-001</td><td><span class="e">Length</span> 45 characters, limit is 40</td></tr>
+      <tr><td class="id">ps-017</td><td><span class="w">Untranslated</span> target identical to source</td></tr>
+      <tr><td class="id">ps-028</td><td><span class="v">Repaired</span> lost tag ⟦/1⟧ fixed in the repair round</td></tr>
+    </table>
+  </div>
+</div>
+<div class="tags"><span>Python</span><span>Claude API</span><span>XLIFF 1.2 / 2.0</span><span>TMX &amp; fuzzy matching</span><span>MQM</span><span>Phrase TMS workflow</span></div>
+</body></html>

@@ -1,0 +1,414 @@
+{
+  "feedback_file": "samples/linguist_feedback.csv",
+  "metrics": {
+    "overall": {
+      "segments": 15,
+      "unchanged_pct": 20.0,
+      "avg_normalized_edit_distance": 0.223,
+      "avg_edit_rate": 0.292,
+      "effort": {
+        "none": 3,
+        "light": 4,
+        "medium": 5,
+        "heavy": 3
+      },
+      "categories": {
+        "style": 5,
+        "terminology": 4,
+        "accuracy": 3
+      }
+    },
+    "languages": {
+      "bg": {
+        "segments": 8,
+        "unchanged_pct": 12.5,
+        "avg_normalized_edit_distance": 0.324,
+        "avg_edit_rate": 0.448,
+        "effort": {
+          "none": 1,
+          "light": 2,
+          "medium": 2,
+          "heavy": 3
+        },
+        "categories": {
+          "style": 4,
+          "accuracy": 2,
+          "terminology": 1
+        }
+      },
+      "de": {
+        "segments": 7,
+        "unchanged_pct": 28.6,
+        "avg_normalized_edit_distance": 0.108,
+        "avg_edit_rate": 0.114,
+        "effort": {
+          "none": 2,
+          "light": 2,
+          "medium": 3,
+          "heavy": 0
+        },
+        "categories": {
+          "terminology": 3,
+          "accuracy": 1,
+          "style": 1
+        }
+      }
+    },
+    "segments": [
+      {
+        "segment_id": "ps-001",
+        "target_lang": "bg",
+        "category": "style",
+        "comment": "Shortened to fit the 40-character limit",
+        "source": "Riptide 4/3 Chest-Zip Wetsuit",
+        "mt": "Riptide 4/3 неопренов костюм с цип на гърдите",
+        "post_edit": "Riptide 4/3 неопренов костюм Chest-Zip",
+        "char_edit_distance": 16,
+        "normalized_edit_distance": 0.356,
+        "word_edits": 4,
+        "edit_rate": 0.571,
+        "effort": "medium",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-002",
+        "target_lang": "bg",
+        "category": "style",
+        "comment": "Dawn patrol = early session, not \"waves\"",
+        "source": "Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.",
+        "mt": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от първите вълни на зазоряване до залеза.",
+        "post_edit": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от ранната сутрешна сесия до залеза.",
+        "char_edit_distance": 21,
+        "normalized_edit_distance": 0.2,
+        "word_edits": 4,
+        "edit_rate": 0.182,
+        "effort": "medium",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-010",
+        "target_lang": "bg",
+        "category": "terminology",
+        "comment": "Glossary term",
+        "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+        "mt": "Комбинирай го с нашите ⟦1⟧Lockdown крепления⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.",
+        "post_edit": "Комбинирай го с нашите ⟦1⟧Lockdown автомати⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.",
+        "char_edit_distance": 8,
+        "normalized_edit_distance": 0.085,
+        "word_edits": 1,
+        "edit_rate": 0.067,
+        "effort": "light",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-017",
+        "target_lang": "bg",
+        "category": "accuracy",
+        "comment": "Product type must be translated",
+        "source": "Shred 150 Dropper Post",
+        "mt": "Shred 150 Dropper Post",
+        "post_edit": "Телескопична колона Shred 150",
+        "char_edit_distance": 27,
+        "normalized_edit_distance": 0.931,
+        "word_edits": 4,
+        "edit_rate": 1.0,
+        "effort": "heavy",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-019",
+        "target_lang": "bg",
+        "category": "accuracy",
+        "comment": "Wrong diameter",
+        "source": "Compatible with 30.9 mm and 31.6 mm seat tubes.",
+        "mt": "Съвместима с подседалкови тръби 30,9 мм и 31,8 мм.",
+        "post_edit": "Съвместима с подседалкови тръби 30,9 мм и 31,6 мм.",
+        "char_edit_distance": 1,
+        "normalized_edit_distance": 0.02,
+        "word_edits": 1,
+        "edit_rate": 0.1,
+        "effort": "light",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-022",
+        "target_lang": "bg",
+        "category": "style",
+        "comment": "Standard webshop wording",
+        "source": "Ships within 2 business days.",
+        "mt": "Изпраща се в рамките на 2 работни дни.",
+        "post_edit": "Доставка до 2 работни дни.",
+        "char_edit_distance": 19,
+        "normalized_edit_distance": 0.5,
+        "word_edits": 5,
+        "edit_rate": 0.833,
+        "effort": "heavy",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-027",
+        "target_lang": "bg",
+        "category": "style",
+        "comment": "Standard webshop wording",
+        "source": "Ships within 2 business days.",
+        "mt": "Изпраща се в рамките на 2 работни дни.",
+        "post_edit": "Доставка до 2 работни дни.",
+        "char_edit_distance": 19,
+        "normalized_edit_distance": 0.5,
+        "word_edits": 5,
+        "edit_rate": 0.833,
+        "effort": "heavy",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-030",
+        "target_lang": "bg",
+        "category": "none",
+        "comment": "",
+        "source": "Ride more. Worry less.",
+        "mt": "Карай повече. Мисли по-малко.",
+        "post_edit": "Карай повече. Мисли по-малко.",
+        "char_edit_distance": 0,
+        "normalized_edit_distance": 0.0,
+        "word_edits": 0,
+        "edit_rate": 0.0,
+        "effort": "none",
+        "unchanged": true
+      },
+      {
+        "segment_id": "ps-008",
+        "target_lang": "de",
+        "category": "none",
+        "comment": "",
+        "source": "A directional twin with camber between the feet and rocker in the nose for effortless float in powder.",
+        "mt": "Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.",
+        "post_edit": "Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.",
+        "char_edit_distance": 0,
+        "normalized_edit_distance": 0.0,
+        "word_edits": 0,
+        "edit_rate": 0.0,
+        "effort": "none",
+        "unchanged": true
+      },
+      {
+        "segment_id": "ps-010",
+        "target_lang": "de",
+        "category": "none",
+        "comment": "",
+        "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+        "mt": "Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.",
+        "post_edit": "Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.",
+        "char_edit_distance": 0,
+        "normalized_edit_distance": 0.0,
+        "word_edits": 0,
+        "edit_rate": 0.0,
+        "effort": "none",
+        "unchanged": true
+      },
+      {
+        "segment_id": "ps-013",
+        "target_lang": "de",
+        "category": "terminology",
+        "comment": "Usual term for helmets",
+        "source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs.",
+        "mt": "Wiegt nur 340 g und bietet 18 Belüftungsöffnungen, die dich bei langen Anstiegen kühl halten.",
+        "post_edit": "Wiegt nur 340 g und bietet 18 Lüftungsöffnungen, die dich bei langen Anstiegen kühl halten.",
+        "char_edit_distance": 3,
+        "normalized_edit_distance": 0.032,
+        "word_edits": 1,
+        "edit_rate": 0.059,
+        "effort": "light",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-020",
+        "target_lang": "de",
+        "category": "accuracy",
+        "comment": "Fahrstunden = driving lessons",
+        "source": "Service interval: every 200 hours of riding.",
+        "mt": "Wartungsintervall: alle 200 Fahrstunden.",
+        "post_edit": "Wartungsintervall: alle 200 Betriebsstunden.",
+        "char_edit_distance": 7,
+        "normalized_edit_distance": 0.159,
+        "word_edits": 1,
+        "edit_rate": 0.167,
+        "effort": "medium",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-022",
+        "target_lang": "de",
+        "category": "terminology",
+        "comment": "Glossary: Werktage",
+        "source": "Ships within 2 business days.",
+        "mt": "Versand innerhalb von 2 Arbeitstagen.",
+        "post_edit": "Versand innerhalb von 2 Werktagen.",
+        "char_edit_distance": 6,
+        "normalized_edit_distance": 0.162,
+        "word_edits": 1,
+        "edit_rate": 0.167,
+        "effort": "medium",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-024",
+        "target_lang": "de",
+        "category": "style",
+        "comment": "Double space; fewer anglicisms",
+        "source": "Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.",
+        "mt": "Handgeshapt in Portugal,  mit Single-to-Double-Concave für Speed und Drive in den Turns.",
+        "post_edit": "Handgeshapt in Portugal, mit Single-to-Double-Concave für Tempo und Drive in den Turns.",
+        "char_edit_distance": 6,
+        "normalized_edit_distance": 0.068,
+        "word_edits": 1,
+        "edit_rate": 0.071,
+        "effort": "light",
+        "unchanged": false
+      },
+      {
+        "segment_id": "ps-027",
+        "target_lang": "de",
+        "category": "terminology",
+        "comment": "Glossary + consistency with ps-022",
+        "source": "Ships within 2 business days.",
+        "mt": "Lieferung innerhalb von 2 Arbeitstagen.",
+        "post_edit": "Versand innerhalb von 2 Werktagen.",
+        "char_edit_distance": 13,
+        "normalized_edit_distance": 0.333,
+        "word_edits": 2,
+        "edit_rate": 0.333,
+        "effort": "medium",
+        "unchanged": false
+      }
+    ],
+    "qa_before_after": {
+      "bg": {
+        "mt_errors": 4,
+        "mt_warnings": 1,
+        "post_edit_errors": 0,
+        "post_edit_warnings": 0
+      },
+      "de": {
+        "mt_errors": 2,
+        "mt_warnings": 3,
+        "post_edit_errors": 0,
+        "post_edit_warnings": 0
+      }
+    }
+  },
+  "tm_update": {
+    "added": 13,
+    "updated": 0,
+    "unchanged": 2
+  },
+  "tm_size": 37,
+  "tm_output": "outputs/demo/tm_updated.tmx",
+  "glossary_candidates": [
+    {
+      "target_lang": "de",
+      "mt_term": "Arbeitstagen",
+      "post_edit_term": "Werktagen",
+      "occurrences": 2,
+      "categories": [
+        "terminology"
+      ],
+      "status": "glossary-not-followed",
+      "glossary_term": "business days",
+      "segments": [
+        "ps-022",
+        "ps-027"
+      ],
+      "example_source": "Ships within 2 business days."
+    },
+    {
+      "target_lang": "bg",
+      "mt_term": "крепления",
+      "post_edit_term": "автомати",
+      "occurrences": 1,
+      "categories": [
+        "terminology"
+      ],
+      "status": "glossary-not-followed",
+      "glossary_term": "binding",
+      "segments": [
+        "ps-010"
+      ],
+      "example_source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack."
+    },
+    {
+      "target_lang": "bg",
+      "mt_term": "Изпраща се в рамките на",
+      "post_edit_term": "Доставка до",
+      "occurrences": 2,
+      "categories": [
+        "style"
+      ],
+      "status": "new-candidate",
+      "glossary_term": "",
+      "segments": [
+        "ps-022",
+        "ps-027"
+      ],
+      "example_source": "Ships within 2 business days."
+    },
+    {
+      "target_lang": "de",
+      "mt_term": "Belüftungsöffnungen",
+      "post_edit_term": "Lüftungsöffnungen",
+      "occurrences": 1,
+      "categories": [
+        "terminology"
+      ],
+      "status": "new-candidate",
+      "glossary_term": "",
+      "segments": [
+        "ps-013"
+      ],
+      "example_source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs."
+    },
+    {
+      "target_lang": "de",
+      "mt_term": "Lieferung",
+      "post_edit_term": "Versand",
+      "occurrences": 1,
+      "categories": [
+        "terminology"
+      ],
+      "status": "new-candidate",
+      "glossary_term": "",
+      "segments": [
+        "ps-027"
+      ],
+      "example_source": "Ships within 2 business days."
+    }
+  ],
+  "glossary_candidates_file": "outputs/demo/glossary_candidates.csv",
+  "tm_leverage": {
+    "bg": {
+      "segments": 30,
+      "before": {
+        "exact": 3,
+        "fuzzy": 3,
+        "no_match": 24
+      },
+      "after": {
+        "exact": 11,
+        "fuzzy": 2,
+        "no_match": 17
+      }
+    },
+    "de": {
+      "segments": 30,
+      "before": {
+        "exact": 3,
+        "fuzzy": 3,
+        "no_match": 24
+      },
+      "after": {
+        "exact": 10,
+        "fuzzy": 3,
+        "no_match": 17
+      }
+    }
+  }
+}

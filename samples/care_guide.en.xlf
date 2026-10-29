@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XLIFF 2.0 sample: wetsuit care guide, with originalData, <ph>, nested <pc> and a size restriction. -->
+<xliff xmlns="urn:oasis:names:tc:xliff:document:2.0" xmlns:slr="urn:oasis:names:tc:xliff:sizerestriction:2.0" version="2.0" srcLang="en" trgLang="de">
+  <file id="f1" original="care-guide.html">
+    <unit id="cg-1" slr:sizeRestriction="30">
+      <segment>
+        <source>Wetsuit care in 3 steps</source>
+      </segment>
+    </unit>
+    <unit id="cg-2">
+      <notes><note>Instructions shown on the product page.</note></notes>
+      <originalData>
+        <data id="d1">&lt;br/&gt;</data>
+      </originalData>
+      <segment id="s1">
+        <source>Rinse with <pc id="1" type="fmt" subType="xlf:b">fresh water</pc> after every session.</source>
+      </segment>
+      <segment id="s2">
+        <source>Dry it inside out, away from direct sun.<ph id="2" dataRef="d1"/></source>
+      </segment>
+    </unit>
+    <unit id="cg-3">
+      <segment>
+        <source>Never use a <pc id="1" type="fmt"><pc id="2" type="fmt">hot</pc> wash</pc> or a dryer.</source>
+      </segment>
+    </unit>
+  </file>
+</xliff>

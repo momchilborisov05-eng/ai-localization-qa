@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sample product copy for a fictional action-sports brand ("Northline"), summer/winter 2026 catalogue.
+     Structured like a Phrase TMS XLIFF 1.2 export: one trans-unit per segment, inline tags, notes, maxwidth. -->
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="northline-catalogue-2026.docx" source-language="en" target-language="bg" datatype="x-undefined">
+    <header>
+      <note>Client: Northline. Domain: action sports e-commerce (surf, snowboard, MTB).</note>
+    </header>
+    <body>
+      <trans-unit id="ps-001" maxwidth="40" size-unit="char">
+        <source>Riptide 4/3 Chest-Zip Wetsuit</source>
+        <target state="needs-review-translation">Riptide 4/3 неопренов костюм с цип на гърдите</target>
+        <note>Product title. Keep the model name in English.</note>
+      </trans-unit>
+      <trans-unit id="ps-002">
+        <source>Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.</source>
+        <target state="translated">Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от първите вълни на зазоряване до залеза.</target>
+        <note>"Dawn patrol" = surfing at first light.</note>
+      </trans-unit>
+      <trans-unit id="ps-003">
+        <source><g id="1" ctype="bold">Key features:</g> 4/3 mm limestone neoprene, glued and blind-stitched seams and a quick-dry thermal lining.</source>
+        <target state="translated"><g id="1" ctype="bold">Основни характеристики:</g> 4/3 мм неопрен на основата на варовик, залепени и скрито зашити шевове и бързосъхнеща термо подплата.</target>
+      </trans-unit>
+      <trans-unit id="ps-004">
+        <source>Water temperature range: 12–16 °C.</source>
+        <target state="translated">Температурен диапазон на водата: 12–16 °C.</target>
+      </trans-unit>
+      <trans-unit id="ps-005">
+        <source>Available in sizes XS to XXL.</source>
+        <target state="translated">Предлага се в размери от XS до XXL.</target>
+      </trans-unit>
+      <trans-unit id="ps-006">
+        <source>Free shipping on orders over €100.</source>
+        <target state="translated">Безплатна доставка за поръчки над 100 €.</target>
+      </trans-unit>
+      <trans-unit id="ps-007" maxwidth="32" size-unit="char">
+        <source>Drift Pro Snowboard</source>
+        <target state="translated">Сноуборд Drift Pro</target>
+        <note>Product title. Keep the model name in English.</note>
+      </trans-unit>
+      <trans-unit id="ps-008">
+        <source>A directional twin with camber between the feet and rocker in the nose for effortless float in powder.</source>
+        <target state="translated">Directional twin с камбър между краката и рокер в носа за лесно плъзгане в пухкав сняг.</target>
+      </trans-unit>
+      <trans-unit id="ps-009">
+        <source>Recommended rider weight: 70–95 kg.</source>
+        <target state="translated">Препоръчително тегло на райдъра: 70–95 кг.</target>
+      </trans-unit>
+      <trans-unit id="ps-010">
+        <source>Pair it with our <g id="1" ctype="link">Lockdown bindings</g> for maximum edge control on hardpack.</source>
+        <target state="needs-review-translation">Комбинирай го с нашите <g id="1" ctype="link">Lockdown крепления</g> за максимален контрол на кантовете върху твърд сняг.</target>
+      </trans-unit>
+      <trans-unit id="ps-011">
+        <source>Sintered base, waxed and ready to ride out of the box.</source>
+        <target state="translated">Синтерована основа, намазана с вакса и готова за каране веднага след разопаковане.</target>
+      </trans-unit>
+      <trans-unit id="ps-012" maxwidth="40" size-unit="char">
+        <source>Trailblazer MIPS Mountain Bike Helmet</source>
+        <target state="translated">МТБ каска Trailblazer MIPS</target>
+        <note>Product title. Keep the model name in English.</note>
+      </trans-unit>
+      <trans-unit id="ps-013">
+        <source>Weighs just 340 g and features 18 vents to keep you cool on long climbs.</source>
+        <target state="translated">Тежи само 340 г и има 18 вентилационни отвора, които те охлаждат при дълги изкачвания.</target>
+      </trans-unit>
+      <trans-unit id="ps-014">
+        <source>Includes a removable visor and a magnetic Fidlock® buckle.</source>
+        <target state="translated">Включва сваляща се козирка и магнитна закопчалка Fidlock®.</target>
+      </trans-unit>
+      <trans-unit id="ps-015">
+        <source>Certified to EN 1078 and CPSC safety standards.</source>
+        <target state="translated">Сертифицирана по стандартите за безопасност EN 1078 и CPSC.</target>
+      </trans-unit>
+      <trans-unit id="ps-016">
+        <source>Size {size}: fits head circumference {min}–{max} cm.</source>
+        <target state="translated">Размер {size}: за обиколка на главата {min}–{max} см.</target>
+        <note>Placeholders are filled in by the shop system.</note>
+      </trans-unit>
+      <trans-unit id="ps-017" maxwidth="32" size-unit="char">
+        <source>Shred 150 Dropper Post</source>
+        <target state="needs-review-translation">Shred 150 Dropper Post</target>
+        <note>Product title. Keep the model name in English.</note>
+      </trans-unit>
+      <trans-unit id="ps-018">
+        <source>Press the remote lever <x id="1" ctype="x-icon"/> to drop the saddle by up to 150 mm.</source>
+        <target state="translated">Натисни дистанционния лост <x id="1" ctype="x-icon"/>, за да спуснеш седалката с до 150 мм.</target>
+        <note>The inline tag is an icon of the lever.</note>
+      </trans-unit>
+      <trans-unit id="ps-019">
+        <source>Compatible with 30.9 mm and 31.6 mm seat tubes.</source>
+        <target state="needs-review-translation">Съвместима с подседалкови тръби 30,9 мм и 31,8 мм.</target>
+      </trans-unit>
+      <trans-unit id="ps-020">
+        <source>Service interval: every 200 hours of riding.</source>
+        <target state="translated">Сервизен интервал: на всеки 200 часа каране.</target>
+      </trans-unit>
+      <trans-unit id="ps-021">
+        <source>Waterproof rating: 20,000 mm / breathability: 15,000 g/m²/24 h.</source>
+        <target state="translated">Водоустойчивост: 20 000 мм / дишаемост: 15 000 г/м²/24 ч.</target>
+      </trans-unit>
+      <trans-unit id="ps-022">
+        <source>Ships within 2 business days.</source>
+        <target state="translated">Изпраща се в рамките на 2 работни дни.</target>
+      </trans-unit>
+      <trans-unit id="ps-023" maxwidth="32" size-unit="char">
+        <source>Swell Hunter 6'2" Shortboard</source>
+        <target state="translated">Шортборд Swell Hunter 6'2"</target>
+        <note>Product title. Keep the model name in English.</note>
+      </trans-unit>
+      <trans-unit id="ps-024">
+        <source>Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.</source>
+        <target state="translated">Ръчно изработен в Португалия със single-to-double конкейв за скорост и контрол в завоите.</target>
+      </trans-unit>
+      <trans-unit id="ps-025">
+        <source>Includes FCS II fin boxes; fins sold separately.</source>
+        <target state="translated">Включва кутии за перки FCS II; перките се продават отделно.</target>
+      </trans-unit>
+      <trans-unit id="ps-026">
+        <source>Tail pad and leash not included.</source>
+        <target state="translated">Тейл пад и лийш не са включени.</target>
+      </trans-unit>
+      <trans-unit id="ps-027">
+        <source>Ships within 2 business days.</source>
+        <target state="translated">Изпраща се в рамките на 2 работни дни.</target>
+      </trans-unit>
+      <trans-unit id="ps-028">
+        <source>Questions? Our riders are here to help: <g id="2" ctype="link">contact support</g>.</source>
+        <target state="translated">Въпроси? Нашите райдъри са тук, за да помогнат: <g id="2" ctype="link">свържи се с поддръжката</g>.</target>
+      </trans-unit>
+      <trans-unit id="ps-029">
+        <source>30-day returns, no questions asked.</source>
+        <target state="translated">30 дни за връщане без излишни въпроси.</target>
+      </trans-unit>
+      <trans-unit id="ps-030" maxwidth="30" size-unit="char">
+        <source>Ride more. Worry less.</source>
+        <target state="translated">Карай повече. Мисли по-малко.</target>
+        <note>Brand tagline. Keep it short and punchy.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

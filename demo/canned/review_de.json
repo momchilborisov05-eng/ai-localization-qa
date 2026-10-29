@@ -1,0 +1,43 @@
+{
+  "_comment": "DEMO DATA: canned MQM review findings (de) for the bundled samples, written by hand. Segments not listed have no findings.",
+  "ps-002": [
+    {
+      "category": "fluency",
+      "severity": "minor",
+      "explanation": "'vom Dawn Patrol' reads awkwardly in German; the gender of the loanword is unclear.",
+      "suggested_fix": "Der Riptide 4/3 wurde für Sessions im kalten Wasser entwickelt und hält dich von der ersten Morgensession bis zum Sonnenuntergang warm."
+    }
+  ],
+  "ps-013": [
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "explanation": "For helmets, 'Lüftungsöffnungen' is the usual term.",
+      "suggested_fix": "Wiegt nur 340 g und bietet 18 Lüftungsöffnungen, die dich bei langen Anstiegen kühl halten."
+    }
+  ],
+  "ps-020": [
+    {
+      "category": "accuracy",
+      "severity": "minor",
+      "explanation": "'Fahrstunden' usually means driving lessons; 'Betriebsstunden' is unambiguous.",
+      "suggested_fix": "Wartungsintervall: alle 200 Betriebsstunden."
+    }
+  ],
+  "ps-022": [
+    {
+      "category": "terminology",
+      "severity": "major",
+      "explanation": "'Arbeitstagen' is used instead of the glossary term 'Werktagen'.",
+      "suggested_fix": "Versand innerhalb von 2 Werktagen."
+    }
+  ],
+  "ps-027": [
+    {
+      "category": "terminology",
+      "severity": "major",
+      "explanation": "Uses 'Arbeitstagen' instead of the glossary term and 'Lieferung' instead of 'Versand' as in ps-022.",
+      "suggested_fix": "Versand innerhalb von 2 Werktagen."
+    }
+  ]
+}

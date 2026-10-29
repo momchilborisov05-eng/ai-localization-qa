@@ -1,0 +1,1818 @@
+{
+  "tool": "AI Localization QA",
+  "version": "1.0.0",
+  "generated_at": "2026-10-29 09:52 UTC",
+  "demo": true,
+  "model": "demo (canned responses, no API calls)",
+  "settings": {
+    "mode": "demo"
+  },
+  "check_labels": {
+    "tags": "Tags & placeholders",
+    "numbers": "Numbers",
+    "units": "Units",
+    "punctuation": "Punctuation",
+    "whitespace": "Whitespace",
+    "length": "Length limit",
+    "glossary": "Glossary",
+    "dnt": "Do-not-translate",
+    "untranslated": "Untranslated",
+    "consistency": "Consistency"
+  },
+  "runs": [
+    {
+      "input_file": "samples/product_copy.en.xlf",
+      "target_lang": "bg",
+      "output_file": "outputs/demo/product_copy.bg.xlf",
+      "format": "xliff12",
+      "summary": {
+        "segments": 30,
+        "source_words": 265,
+        "tm_reused": 3,
+        "mt_with_fuzzy": 3,
+        "mt_new": 24,
+        "existing": 0,
+        "repaired": 1,
+        "qa_errors": 5,
+        "qa_warnings": 1,
+        "qa_by_check": {
+          "glossary": 2,
+          "numbers": 2,
+          "length": 1,
+          "untranslated": 1
+        },
+        "segments_with_errors": 4,
+        "review_issues": 6,
+        "mqm": {
+          "score": 85.66,
+          "penalty": 38,
+          "words": 265,
+          "passed": false,
+          "threshold": 95.0,
+          "by_category": {
+            "accuracy": 2,
+            "fluency": 2,
+            "terminology": 1,
+            "style": 1,
+            "locale_convention": 0,
+            "markup": 0
+          },
+          "by_severity": {
+            "minor": 3,
+            "major": 2,
+            "critical": 1
+          }
+        },
+        "usage": {
+          "requests": 5,
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "output_tokens": 0
+        },
+        "unwritable": []
+      },
+      "segments": [
+        {
+          "id": "ps-001",
+          "source": "Riptide 4/3 Chest-Zip Wetsuit",
+          "target": "Riptide 4/3 неопренов костюм с цип на гърдите",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 40,
+          "length": 45,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-001",
+              "check": "length",
+              "severity": "error",
+              "message": "45 characters, limit is 40"
+            }
+          ],
+          "review": []
+        },
+        {
+          "id": "ps-002",
+          "source": "Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.",
+          "target": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от първите вълни на зазоряване до залеза.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 105,
+          "note": "\"Dawn patrol\" = surfing at first light.",
+          "repaired": false,
+          "qa": [],
+          "review": [
+            {
+              "segment_id": "ps-002",
+              "category": "style",
+              "severity": "minor",
+              "explanation": "'Dawn patrol' is surf slang for an early-morning session; the literal paraphrase is wordy.",
+              "suggested_fix": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от ранната сутрешна сесия до залеза."
+            }
+          ]
+        },
+        {
+          "id": "ps-003",
+          "source": "⟦1⟧Key features:⟦/1⟧ 4/3 mm limestone neoprene, glued and blind-stitched seams and a quick-dry thermal lining.",
+          "target": "⟦1⟧Основни характеристики:⟦/1⟧ 4/3 мм неопрен на основата на варовик, залепени и скрито зашити шевове и бързосъхнеща термо подплата.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 125,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": [
+            {
+              "segment_id": "ps-003",
+              "category": "fluency",
+              "severity": "minor",
+              "explanation": "'термо подплата' should be written as one word: 'термоподплата'.",
+              "suggested_fix": "⟦1⟧Основни характеристики:⟦/1⟧ 4/3 мм неопрен на основата на варовик, залепени и скрито зашити шевове и бързосъхнеща термоподплата."
+            }
+          ]
+        },
+        {
+          "id": "ps-004",
+          "source": "Water temperature range: 12–16 °C.",
+          "target": "Температурен диапазон на водата: 12–16 °C.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 42,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-005",
+          "source": "Available in sizes XS to XXL.",
+          "target": "Предлага се в размери от XS до XXL.",
+          "origin": "mt",
+          "tm_score": 89,
+          "max_chars": null,
+          "length": 35,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-006",
+          "source": "Free shipping on orders over €100.",
+          "target": "Безплатна доставка за поръчки над 100 €.",
+          "origin": "tm",
+          "tm_score": 100,
+          "max_chars": null,
+          "length": 40,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-007",
+          "source": "Drift Pro Snowboard",
+          "target": "Сноуборд Drift Pro",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 32,
+          "length": 18,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-008",
+          "source": "A directional twin with camber between the feet and rocker in the nose for effortless float in powder.",
+          "target": "Directional twin с камбър между краката и рокер в носа за лесно плъзгане в пухкав сняг.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 87,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-009",
+          "source": "Recommended rider weight: 70–95 kg.",
+          "target": "Препоръчително тегло на райдъра: 70–95 кг.",
+          "origin": "mt",
+          "tm_score": 83,
+          "max_chars": null,
+          "length": 42,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-010",
+          "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+          "target": "Комбинирай го с нашите ⟦1⟧Lockdown крепления⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 94,
+          "note": "",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-010",
+              "check": "glossary",
+              "severity": "error",
+              "message": "'binding' should be translated as 'автомати'"
+            }
+          ],
+          "review": [
+            {
+              "segment_id": "ps-010",
+              "category": "terminology",
+              "severity": "major",
+              "explanation": "'крепления' is used for 'bindings'; the glossary requires 'автомати'.",
+              "suggested_fix": "Комбинирай го с нашите ⟦1⟧Lockdown автомати⟦/1⟧ за максимален контрол на кантовете върху твърд сняг."
+            }
+          ]
+        },
+        {
+          "id": "ps-011",
+          "source": "Sintered base, waxed and ready to ride out of the box.",
+          "target": "Синтерована основа, намазана с вакса и готова за каране веднага след разопаковане.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 82,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": [
+            {
+              "segment_id": "ps-011",
+              "category": "fluency",
+              "severity": "minor",
+              "explanation": "'намазана с вакса' sounds colloquial for product copy.",
+              "suggested_fix": "Синтерована основа, с нанесена вакса и готова за каране веднага след разопаковане."
+            }
+          ]
+        },
+        {
+          "id": "ps-012",
+          "source": "Trailblazer MIPS Mountain Bike Helmet",
+          "target": "МТБ каска Trailblazer MIPS",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 40,
+          "length": 26,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-013",
+          "source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs.",
+          "target": "Тежи само 340 г и има 18 вентилационни отвора, които те охлаждат при дълги изкачвания.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 86,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-014",
+          "source": "Includes a removable visor and a magnetic Fidlock® buckle.",
+          "target": "Включва сваляща се козирка и магнитна закопчалка Fidlock®.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 58,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-015",
+          "source": "Certified to EN 1078 and CPSC safety standards.",
+          "target": "Сертифицирана по стандартите за безопасност EN 1078 и CPSC.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 59,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-016",
+          "source": "Size {size}: fits head circumference {min}–{max} cm.",
+          "target": "Размер {size}: за обиколка на главата {min}–{max} см.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 53,
+          "note": "Placeholders are filled in by the shop system.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-017",
+          "source": "Shred 150 Dropper Post",
+          "target": "Shred 150 Dropper Post",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 32,
+          "length": 22,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-017",
+              "check": "untranslated",
+              "severity": "warning",
+              "message": "Target is identical to source"
+            },
+            {
+              "segment_id": "ps-017",
+              "check": "glossary",
+              "severity": "error",
+              "message": "'dropper post' should be translated as 'телескопична колона'"
+            }
+          ],
+          "review": [
+            {
+              "segment_id": "ps-017",
+              "category": "accuracy",
+              "severity": "major",
+              "explanation": "The product type was left in English; only the model name 'Shred 150' should stay in English.",
+              "suggested_fix": "Телескопична колона Shred 150"
+            }
+          ]
+        },
+        {
+          "id": "ps-018",
+          "source": "Press the remote lever ⟦1⟧ to drop the saddle by up to 150 mm.",
+          "target": "Натисни дистанционния лост ⟦1⟧, за да спуснеш седалката с до 150 мм.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 65,
+          "note": "The inline tag is an icon of the lever.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-019",
+          "source": "Compatible with 30.9 mm and 31.6 mm seat tubes.",
+          "target": "Съвместима с подседалкови тръби 30,9 мм и 31,8 мм.",
+          "origin": "mt",
+          "tm_score": 75,
+          "max_chars": null,
+          "length": 50,
+          "note": "",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-019",
+              "check": "numbers",
+              "severity": "error",
+              "message": "Number(s) missing or changed: 31.6"
+            },
+            {
+              "segment_id": "ps-019",
+              "check": "numbers",
+              "severity": "error",
+              "message": "Number(s) not in source: 31,8"
+            }
+          ],
+          "review": [
+            {
+              "segment_id": "ps-019",
+              "category": "accuracy",
+              "severity": "critical",
+              "explanation": "The second diameter is wrong (31,8 instead of 31,6 mm); customers buy seat posts by this value.",
+              "suggested_fix": "Съвместима с подседалкови тръби 30,9 мм и 31,6 мм."
+            }
+          ]
+        },
+        {
+          "id": "ps-020",
+          "source": "Service interval: every 200 hours of riding.",
+          "target": "Сервизен интервал: на всеки 200 часа каране.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 44,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-021",
+          "source": "Waterproof rating: 20,000 mm / breathability: 15,000 g/m²/24 h.",
+          "target": "Водоустойчивост: 20 000 мм / дишаемост: 15 000 г/м²/24 ч.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 57,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-022",
+          "source": "Ships within 2 business days.",
+          "target": "Изпраща се в рамките на 2 работни дни.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 38,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-023",
+          "source": "Swell Hunter 6'2\" Shortboard",
+          "target": "Шортборд Swell Hunter 6'2\"",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 32,
+          "length": 26,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-024",
+          "source": "Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.",
+          "target": "Ръчно изработен в Португалия със single-to-double конкейв за скорост и контрол в завоите.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 89,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-025",
+          "source": "Includes FCS II fin boxes; fins sold separately.",
+          "target": "Включва кутии за перки FCS II; перките се продават отделно.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 59,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-026",
+          "source": "Tail pad and leash not included.",
+          "target": "Тейл пад и лийш не са включени.",
+          "origin": "tm",
+          "tm_score": 100,
+          "max_chars": null,
+          "length": 31,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-027",
+          "source": "Ships within 2 business days.",
+          "target": "Изпраща се в рамките на 2 работни дни.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 38,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-028",
+          "source": "Questions? Our riders are here to help: ⟦1⟧contact support⟦/1⟧.",
+          "target": "Въпроси? Нашите райдъри са тук, за да помогнат: ⟦1⟧свържи се с поддръжката⟦/1⟧.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 72,
+          "note": "",
+          "repaired": true,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-029",
+          "source": "30-day returns, no questions asked.",
+          "target": "30 дни за връщане без излишни въпроси.",
+          "origin": "tm",
+          "tm_score": 100,
+          "max_chars": null,
+          "length": 38,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-030",
+          "source": "Ride more. Worry less.",
+          "target": "Карай повече. Мисли по-малко.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 30,
+          "length": 29,
+          "note": "Brand tagline. Keep it short and punchy.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        }
+      ]
+    },
+    {
+      "input_file": "samples/product_copy.en.xlf",
+      "target_lang": "de",
+      "output_file": "outputs/demo/product_copy.de.xlf",
+      "format": "xliff12",
+      "summary": {
+        "segments": 30,
+        "source_words": 265,
+        "tm_reused": 3,
+        "mt_with_fuzzy": 3,
+        "mt_new": 24,
+        "existing": 0,
+        "repaired": 0,
+        "qa_errors": 2,
+        "qa_warnings": 3,
+        "qa_by_check": {
+          "glossary": 2,
+          "consistency": 2,
+          "whitespace": 1
+        },
+        "segments_with_errors": 2,
+        "review_issues": 5,
+        "mqm": {
+          "score": 95.09,
+          "penalty": 13,
+          "words": 265,
+          "passed": true,
+          "threshold": 95.0,
+          "by_category": {
+            "accuracy": 1,
+            "fluency": 1,
+            "terminology": 3,
+            "style": 0,
+            "locale_convention": 0,
+            "markup": 0
+          },
+          "by_severity": {
+            "minor": 3,
+            "major": 2,
+            "critical": 0
+          }
+        },
+        "usage": {
+          "requests": 4,
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "output_tokens": 0
+        },
+        "unwritable": []
+      },
+      "segments": [
+        {
+          "id": "ps-001",
+          "source": "Riptide 4/3 Chest-Zip Wetsuit",
+          "target": "Riptide 4/3 Chest-Zip-Neoprenanzug",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 40,
+          "length": 34,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-002",
+          "source": "Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.",
+          "target": "Der Riptide 4/3 wurde für Sessions im kalten Wasser entwickelt und hält dich vom Dawn Patrol bis zum Sonnenuntergang warm.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 122,
+          "note": "\"Dawn patrol\" = surfing at first light.",
+          "repaired": false,
+          "qa": [],
+          "review": [
+            {
+              "segment_id": "ps-002",
+              "category": "fluency",
+              "severity": "minor",
+              "explanation": "'vom Dawn Patrol' reads awkwardly in German; the gender of the loanword is unclear.",
+              "suggested_fix": "Der Riptide 4/3 wurde für Sessions im kalten Wasser entwickelt und hält dich von der ersten Morgensession bis zum Sonnenuntergang warm."
+            }
+          ]
+        },
+        {
+          "id": "ps-003",
+          "source": "⟦1⟧Key features:⟦/1⟧ 4/3 mm limestone neoprene, glued and blind-stitched seams and a quick-dry thermal lining.",
+          "target": "⟦1⟧Hauptmerkmale:⟦/1⟧ 4/3 mm Neopren auf Kalksteinbasis, verklebte und blindgenähte Nähte sowie ein schnell trocknendes Thermofutter.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 126,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-004",
+          "source": "Water temperature range: 12–16 °C.",
+          "target": "Wassertemperaturbereich: 12–16 °C.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 34,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-005",
+          "source": "Available in sizes XS to XXL.",
+          "target": "Erhältlich in den Größen XS bis XXL.",
+          "origin": "mt",
+          "tm_score": 89,
+          "max_chars": null,
+          "length": 36,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-006",
+          "source": "Free shipping on orders over €100.",
+          "target": "Kostenloser Versand ab 100 € Bestellwert.",
+          "origin": "tm",
+          "tm_score": 100,
+          "max_chars": null,
+          "length": 41,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-007",
+          "source": "Drift Pro Snowboard",
+          "target": "Drift Pro Snowboard",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 32,
+          "length": 19,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-008",
+          "source": "A directional twin with camber between the feet and rocker in the nose for effortless float in powder.",
+          "target": "Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 107,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-009",
+          "source": "Recommended rider weight: 70–95 kg.",
+          "target": "Empfohlenes Fahrergewicht: 70–95 kg.",
+          "origin": "mt",
+          "tm_score": 83,
+          "max_chars": null,
+          "length": 36,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-010",
+          "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+          "target": "Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 85,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-011",
+          "source": "Sintered base, waxed and ready to ride out of the box.",
+          "target": "Gesinterter Belag, gewachst und direkt einsatzbereit.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 53,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-012",
+          "source": "Trailblazer MIPS Mountain Bike Helmet",
+          "target": "Trailblazer MIPS Mountainbike-Helm",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 40,
+          "length": 34,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-013",
+          "source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs.",
+          "target": "Wiegt nur 340 g und bietet 18 Belüftungsöffnungen, die dich bei langen Anstiegen kühl halten.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 93,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": [
+            {
+              "segment_id": "ps-013",
+              "category": "terminology",
+              "severity": "minor",
+              "explanation": "For helmets, 'Lüftungsöffnungen' is the usual term.",
+              "suggested_fix": "Wiegt nur 340 g und bietet 18 Lüftungsöffnungen, die dich bei langen Anstiegen kühl halten."
+            }
+          ]
+        },
+        {
+          "id": "ps-014",
+          "source": "Includes a removable visor and a magnetic Fidlock® buckle.",
+          "target": "Mit abnehmbarem Visier und magnetischer Fidlock®-Schnalle.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 58,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-015",
+          "source": "Certified to EN 1078 and CPSC safety standards.",
+          "target": "Zertifiziert nach den Sicherheitsnormen EN 1078 und CPSC.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 57,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-016",
+          "source": "Size {size}: fits head circumference {min}–{max} cm.",
+          "target": "Größe {size}: passend für Kopfumfang {min}–{max} cm.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 52,
+          "note": "Placeholders are filled in by the shop system.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-017",
+          "source": "Shred 150 Dropper Post",
+          "target": "Shred 150 Vario-Sattelstütze",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 32,
+          "length": 28,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-018",
+          "source": "Press the remote lever ⟦1⟧ to drop the saddle by up to 150 mm.",
+          "target": "Drücke den Remote-Hebel ⟦1⟧, um den Sattel um bis zu 150 mm abzusenken.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 68,
+          "note": "The inline tag is an icon of the lever.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-019",
+          "source": "Compatible with 30.9 mm and 31.6 mm seat tubes.",
+          "target": "Kompatibel mit Sitzrohren mit 30,9 mm und 31,6 mm.",
+          "origin": "mt",
+          "tm_score": 75,
+          "max_chars": null,
+          "length": 50,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-020",
+          "source": "Service interval: every 200 hours of riding.",
+          "target": "Wartungsintervall: alle 200 Fahrstunden.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 40,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": [
+            {
+              "segment_id": "ps-020",
+              "category": "accuracy",
+              "severity": "minor",
+              "explanation": "'Fahrstunden' usually means driving lessons; 'Betriebsstunden' is unambiguous.",
+              "suggested_fix": "Wartungsintervall: alle 200 Betriebsstunden."
+            }
+          ]
+        },
+        {
+          "id": "ps-021",
+          "source": "Waterproof rating: 20,000 mm / breathability: 15,000 g/m²/24 h.",
+          "target": "Wassersäule: 20.000 mm / Atmungsaktivität: 15.000 g/m²/24 h.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 60,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-022",
+          "source": "Ships within 2 business days.",
+          "target": "Versand innerhalb von 2 Arbeitstagen.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 37,
+          "note": "",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-022",
+              "check": "glossary",
+              "severity": "error",
+              "message": "'business days' should be translated as 'Werktage'"
+            },
+            {
+              "segment_id": "ps-022",
+              "check": "consistency",
+              "severity": "warning",
+              "message": "Same source translated 2 different ways (ps-022, ps-027)"
+            }
+          ],
+          "review": [
+            {
+              "segment_id": "ps-022",
+              "category": "terminology",
+              "severity": "major",
+              "explanation": "'Arbeitstagen' is used instead of the glossary term 'Werktagen'.",
+              "suggested_fix": "Versand innerhalb von 2 Werktagen."
+            }
+          ]
+        },
+        {
+          "id": "ps-023",
+          "source": "Swell Hunter 6'2\" Shortboard",
+          "target": "Swell Hunter 6'2\" Shortboard",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 32,
+          "length": 28,
+          "note": "Product title. Keep the model name in English.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-024",
+          "source": "Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.",
+          "target": "Handgeshapt in Portugal,  mit Single-to-Double-Concave für Speed und Drive in den Turns.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 88,
+          "note": "",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-024",
+              "check": "whitespace",
+              "severity": "warning",
+              "message": "Double space in target"
+            }
+          ],
+          "review": []
+        },
+        {
+          "id": "ps-025",
+          "source": "Includes FCS II fin boxes; fins sold separately.",
+          "target": "Inklusive FCS II Finnenboxen; Finnen separat erhältlich.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 56,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-026",
+          "source": "Tail pad and leash not included.",
+          "target": "Tailpad und Leash nicht im Lieferumfang enthalten.",
+          "origin": "tm",
+          "tm_score": 100,
+          "max_chars": null,
+          "length": 50,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-027",
+          "source": "Ships within 2 business days.",
+          "target": "Lieferung innerhalb von 2 Arbeitstagen.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 39,
+          "note": "",
+          "repaired": false,
+          "qa": [
+            {
+              "segment_id": "ps-027",
+              "check": "glossary",
+              "severity": "error",
+              "message": "'business days' should be translated as 'Werktage'"
+            },
+            {
+              "segment_id": "ps-027",
+              "check": "consistency",
+              "severity": "warning",
+              "message": "Same source translated 2 different ways (ps-022, ps-027)"
+            }
+          ],
+          "review": [
+            {
+              "segment_id": "ps-027",
+              "category": "terminology",
+              "severity": "major",
+              "explanation": "Uses 'Arbeitstagen' instead of the glossary term and 'Lieferung' instead of 'Versand' as in ps-022.",
+              "suggested_fix": "Versand innerhalb von 2 Werktagen."
+            }
+          ]
+        },
+        {
+          "id": "ps-028",
+          "source": "Questions? Our riders are here to help: ⟦1⟧contact support⟦/1⟧.",
+          "target": "Fragen? Unsere Rider helfen dir gerne: ⟦1⟧Support kontaktieren⟦/1⟧.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 60,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-029",
+          "source": "30-day returns, no questions asked.",
+          "target": "30 Tage Rückgaberecht, ohne Wenn und Aber.",
+          "origin": "tm",
+          "tm_score": 100,
+          "max_chars": null,
+          "length": 42,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "ps-030",
+          "source": "Ride more. Worry less.",
+          "target": "Mehr fahren. Weniger sorgen.",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": 30,
+          "length": 28,
+          "note": "Brand tagline. Keep it short and punchy.",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        }
+      ]
+    },
+    {
+      "input_file": "samples/ui_strings.en.json",
+      "target_lang": "bg",
+      "output_file": "outputs/demo/ui_strings.bg.json",
+      "format": "json",
+      "summary": {
+        "segments": 9,
+        "source_words": 37,
+        "tm_reused": 0,
+        "mt_with_fuzzy": 0,
+        "mt_new": 9,
+        "existing": 0,
+        "repaired": 0,
+        "qa_errors": 0,
+        "qa_warnings": 0,
+        "qa_by_check": {},
+        "segments_with_errors": 0,
+        "review_issues": 0,
+        "mqm": {
+          "score": 100.0,
+          "penalty": 0,
+          "words": 37,
+          "passed": true,
+          "threshold": 95.0,
+          "by_category": {
+            "accuracy": 0,
+            "fluency": 0,
+            "terminology": 0,
+            "style": 0,
+            "locale_convention": 0,
+            "markup": 0
+          },
+          "by_severity": {
+            "minor": 0,
+            "major": 0,
+            "critical": 0
+          }
+        },
+        "usage": {
+          "requests": 2,
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "output_tokens": 0
+        },
+        "unwritable": []
+      },
+      "segments": [
+        {
+          "id": "cart.title",
+          "source": "Your cart",
+          "target": "Твоята количка",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 14,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "cart.empty",
+          "source": "Your cart is empty. Time to gear up!",
+          "target": "Количката ти е празна. Време е за нова екипировка!",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 50,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "cart.items",
+          "source": "{count} items",
+          "target": "{count} продукта",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 16,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "cart.checkout",
+          "source": "Checkout",
+          "target": "Към плащане",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 11,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.add_to_cart",
+          "source": "Add to cart",
+          "target": "Добави в количката",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 18,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.in_stock",
+          "source": "In stock – ships in {days} days",
+          "target": "В наличност – изпращане до {days} дни",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 37,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.size_guide",
+          "source": "Size guide",
+          "target": "Таблица с размери",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 17,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.reviews",
+          "source": "{count} rider reviews",
+          "target": "{count} отзива от райдъри",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 25,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "promo.banner",
+          "source": "<b>Summer swell sale:</b> up to 30% off wetsuits",
+          "target": "<b>Лятна разпродажба:</b> до 30% отстъпка за неопренови костюми",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 63,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        }
+      ]
+    },
+    {
+      "input_file": "samples/ui_strings.en.json",
+      "target_lang": "de",
+      "output_file": "outputs/demo/ui_strings.de.json",
+      "format": "json",
+      "summary": {
+        "segments": 9,
+        "source_words": 37,
+        "tm_reused": 0,
+        "mt_with_fuzzy": 0,
+        "mt_new": 9,
+        "existing": 0,
+        "repaired": 1,
+        "qa_errors": 0,
+        "qa_warnings": 0,
+        "qa_by_check": {},
+        "segments_with_errors": 0,
+        "review_issues": 0,
+        "mqm": {
+          "score": 100.0,
+          "penalty": 0,
+          "words": 37,
+          "passed": true,
+          "threshold": 95.0,
+          "by_category": {
+            "accuracy": 0,
+            "fluency": 0,
+            "terminology": 0,
+            "style": 0,
+            "locale_convention": 0,
+            "markup": 0
+          },
+          "by_severity": {
+            "minor": 0,
+            "major": 0,
+            "critical": 0
+          }
+        },
+        "usage": {
+          "requests": 3,
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "output_tokens": 0
+        },
+        "unwritable": []
+      },
+      "segments": [
+        {
+          "id": "cart.title",
+          "source": "Your cart",
+          "target": "Dein Warenkorb",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 14,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "cart.empty",
+          "source": "Your cart is empty. Time to gear up!",
+          "target": "Dein Warenkorb ist leer. Zeit für neues Equipment!",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 50,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "cart.items",
+          "source": "{count} items",
+          "target": "{count} Artikel",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 15,
+          "note": "",
+          "repaired": true,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "cart.checkout",
+          "source": "Checkout",
+          "target": "Zur Kasse",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 9,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.add_to_cart",
+          "source": "Add to cart",
+          "target": "In den Warenkorb",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 16,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.in_stock",
+          "source": "In stock – ships in {days} days",
+          "target": "Auf Lager – Versand in {days} Tagen",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 35,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.size_guide",
+          "source": "Size guide",
+          "target": "Größentabelle",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 13,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "product.reviews",
+          "source": "{count} rider reviews",
+          "target": "{count} Rider-Bewertungen",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 25,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        },
+        {
+          "id": "promo.banner",
+          "source": "<b>Summer swell sale:</b> up to 30% off wetsuits",
+          "target": "<b>Summer Swell Sale:</b> bis zu 30 % Rabatt auf Neoprenanzüge",
+          "origin": "mt",
+          "tm_score": 0,
+          "max_chars": null,
+          "length": 62,
+          "note": "",
+          "repaired": false,
+          "qa": [],
+          "review": []
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "feedback_file": "samples/linguist_feedback.csv",
+    "metrics": {
+      "overall": {
+        "segments": 15,
+        "unchanged_pct": 20.0,
+        "avg_normalized_edit_distance": 0.223,
+        "avg_edit_rate": 0.292,
+        "effort": {
+          "none": 3,
+          "light": 4,
+          "medium": 5,
+          "heavy": 3
+        },
+        "categories": {
+          "style": 5,
+          "terminology": 4,
+          "accuracy": 3
+        }
+      },
+      "languages": {
+        "bg": {
+          "segments": 8,
+          "unchanged_pct": 12.5,
+          "avg_normalized_edit_distance": 0.324,
+          "avg_edit_rate": 0.448,
+          "effort": {
+            "none": 1,
+            "light": 2,
+            "medium": 2,
+            "heavy": 3
+          },
+          "categories": {
+            "style": 4,
+            "accuracy": 2,
+            "terminology": 1
+          }
+        },
+        "de": {
+          "segments": 7,
+          "unchanged_pct": 28.6,
+          "avg_normalized_edit_distance": 0.108,
+          "avg_edit_rate": 0.114,
+          "effort": {
+            "none": 2,
+            "light": 2,
+            "medium": 3,
+            "heavy": 0
+          },
+          "categories": {
+            "terminology": 3,
+            "accuracy": 1,
+            "style": 1
+          }
+        }
+      },
+      "segments": [
+        {
+          "segment_id": "ps-001",
+          "target_lang": "bg",
+          "category": "style",
+          "comment": "Shortened to fit the 40-character limit",
+          "source": "Riptide 4/3 Chest-Zip Wetsuit",
+          "mt": "Riptide 4/3 неопренов костюм с цип на гърдите",
+          "post_edit": "Riptide 4/3 неопренов костюм Chest-Zip",
+          "char_edit_distance": 16,
+          "normalized_edit_distance": 0.356,
+          "word_edits": 4,
+          "edit_rate": 0.571,
+          "effort": "medium",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-002",
+          "target_lang": "bg",
+          "category": "style",
+          "comment": "Dawn patrol = early session, not \"waves\"",
+          "source": "Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.",
+          "mt": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от първите вълни на зазоряване до залеза.",
+          "post_edit": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от ранната сутрешна сесия до залеза.",
+          "char_edit_distance": 21,
+          "normalized_edit_distance": 0.2,
+          "word_edits": 4,
+          "edit_rate": 0.182,
+          "effort": "medium",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-010",
+          "target_lang": "bg",
+          "category": "terminology",
+          "comment": "Glossary term",
+          "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+          "mt": "Комбинирай го с нашите ⟦1⟧Lockdown крепления⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.",
+          "post_edit": "Комбинирай го с нашите ⟦1⟧Lockdown автомати⟦/1⟧ за максимален контрол на кантовете върху твърд сняг.",
+          "char_edit_distance": 8,
+          "normalized_edit_distance": 0.085,
+          "word_edits": 1,
+          "edit_rate": 0.067,
+          "effort": "light",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-017",
+          "target_lang": "bg",
+          "category": "accuracy",
+          "comment": "Product type must be translated",
+          "source": "Shred 150 Dropper Post",
+          "mt": "Shred 150 Dropper Post",
+          "post_edit": "Телескопична колона Shred 150",
+          "char_edit_distance": 27,
+          "normalized_edit_distance": 0.931,
+          "word_edits": 4,
+          "edit_rate": 1.0,
+          "effort": "heavy",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-019",
+          "target_lang": "bg",
+          "category": "accuracy",
+          "comment": "Wrong diameter",
+          "source": "Compatible with 30.9 mm and 31.6 mm seat tubes.",
+          "mt": "Съвместима с подседалкови тръби 30,9 мм и 31,8 мм.",
+          "post_edit": "Съвместима с подседалкови тръби 30,9 мм и 31,6 мм.",
+          "char_edit_distance": 1,
+          "normalized_edit_distance": 0.02,
+          "word_edits": 1,
+          "edit_rate": 0.1,
+          "effort": "light",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-022",
+          "target_lang": "bg",
+          "category": "style",
+          "comment": "Standard webshop wording",
+          "source": "Ships within 2 business days.",
+          "mt": "Изпраща се в рамките на 2 работни дни.",
+          "post_edit": "Доставка до 2 работни дни.",
+          "char_edit_distance": 19,
+          "normalized_edit_distance": 0.5,
+          "word_edits": 5,
+          "edit_rate": 0.833,
+          "effort": "heavy",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-027",
+          "target_lang": "bg",
+          "category": "style",
+          "comment": "Standard webshop wording",
+          "source": "Ships within 2 business days.",
+          "mt": "Изпраща се в рамките на 2 работни дни.",
+          "post_edit": "Доставка до 2 работни дни.",
+          "char_edit_distance": 19,
+          "normalized_edit_distance": 0.5,
+          "word_edits": 5,
+          "edit_rate": 0.833,
+          "effort": "heavy",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-030",
+          "target_lang": "bg",
+          "category": "none",
+          "comment": "",
+          "source": "Ride more. Worry less.",
+          "mt": "Карай повече. Мисли по-малко.",
+          "post_edit": "Карай повече. Мисли по-малко.",
+          "char_edit_distance": 0,
+          "normalized_edit_distance": 0.0,
+          "word_edits": 0,
+          "edit_rate": 0.0,
+          "effort": "none",
+          "unchanged": true
+        },
+        {
+          "segment_id": "ps-008",
+          "target_lang": "de",
+          "category": "none",
+          "comment": "",
+          "source": "A directional twin with camber between the feet and rocker in the nose for effortless float in powder.",
+          "mt": "Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.",
+          "post_edit": "Ein Directional Twin mit Camber zwischen den Füßen und Rocker in der Nose für mühelosen Auftrieb im Powder.",
+          "char_edit_distance": 0,
+          "normalized_edit_distance": 0.0,
+          "word_edits": 0,
+          "edit_rate": 0.0,
+          "effort": "none",
+          "unchanged": true
+        },
+        {
+          "segment_id": "ps-010",
+          "target_lang": "de",
+          "category": "none",
+          "comment": "",
+          "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+          "mt": "Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.",
+          "post_edit": "Kombiniere es mit unserer ⟦1⟧Lockdown-Bindung⟦/1⟧ für maximale Kantenkontrolle auf Hardpack.",
+          "char_edit_distance": 0,
+          "normalized_edit_distance": 0.0,
+          "word_edits": 0,
+          "edit_rate": 0.0,
+          "effort": "none",
+          "unchanged": true
+        },
+        {
+          "segment_id": "ps-013",
+          "target_lang": "de",
+          "category": "terminology",
+          "comment": "Usual term for helmets",
+          "source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs.",
+          "mt": "Wiegt nur 340 g und bietet 18 Belüftungsöffnungen, die dich bei langen Anstiegen kühl halten.",
+          "post_edit": "Wiegt nur 340 g und bietet 18 Lüftungsöffnungen, die dich bei langen Anstiegen kühl halten.",
+          "char_edit_distance": 3,
+          "normalized_edit_distance": 0.032,
+          "word_edits": 1,
+          "edit_rate": 0.059,
+          "effort": "light",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-020",
+          "target_lang": "de",
+          "category": "accuracy",
+          "comment": "Fahrstunden = driving lessons",
+          "source": "Service interval: every 200 hours of riding.",
+          "mt": "Wartungsintervall: alle 200 Fahrstunden.",
+          "post_edit": "Wartungsintervall: alle 200 Betriebsstunden.",
+          "char_edit_distance": 7,
+          "normalized_edit_distance": 0.159,
+          "word_edits": 1,
+          "edit_rate": 0.167,
+          "effort": "medium",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-022",
+          "target_lang": "de",
+          "category": "terminology",
+          "comment": "Glossary: Werktage",
+          "source": "Ships within 2 business days.",
+          "mt": "Versand innerhalb von 2 Arbeitstagen.",
+          "post_edit": "Versand innerhalb von 2 Werktagen.",
+          "char_edit_distance": 6,
+          "normalized_edit_distance": 0.162,
+          "word_edits": 1,
+          "edit_rate": 0.167,
+          "effort": "medium",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-024",
+          "target_lang": "de",
+          "category": "style",
+          "comment": "Double space; fewer anglicisms",
+          "source": "Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.",
+          "mt": "Handgeshapt in Portugal,  mit Single-to-Double-Concave für Speed und Drive in den Turns.",
+          "post_edit": "Handgeshapt in Portugal, mit Single-to-Double-Concave für Tempo und Drive in den Turns.",
+          "char_edit_distance": 6,
+          "normalized_edit_distance": 0.068,
+          "word_edits": 1,
+          "edit_rate": 0.071,
+          "effort": "light",
+          "unchanged": false
+        },
+        {
+          "segment_id": "ps-027",
+          "target_lang": "de",
+          "category": "terminology",
+          "comment": "Glossary + consistency with ps-022",
+          "source": "Ships within 2 business days.",
+          "mt": "Lieferung innerhalb von 2 Arbeitstagen.",
+          "post_edit": "Versand innerhalb von 2 Werktagen.",
+          "char_edit_distance": 13,
+          "normalized_edit_distance": 0.333,
+          "word_edits": 2,
+          "edit_rate": 0.333,
+          "effort": "medium",
+          "unchanged": false
+        }
+      ],
+      "qa_before_after": {
+        "bg": {
+          "mt_errors": 4,
+          "mt_warnings": 1,
+          "post_edit_errors": 0,
+          "post_edit_warnings": 0
+        },
+        "de": {
+          "mt_errors": 2,
+          "mt_warnings": 3,
+          "post_edit_errors": 0,
+          "post_edit_warnings": 0
+        }
+      }
+    },
+    "tm_update": {
+      "added": 13,
+      "updated": 0,
+      "unchanged": 2
+    },
+    "tm_size": 37,
+    "tm_output": "outputs/demo/tm_updated.tmx",
+    "glossary_candidates": [
+      {
+        "target_lang": "de",
+        "mt_term": "Arbeitstagen",
+        "post_edit_term": "Werktagen",
+        "occurrences": 2,
+        "categories": [
+          "terminology"
+        ],
+        "status": "glossary-not-followed",
+        "glossary_term": "business days",
+        "segments": [
+          "ps-022",
+          "ps-027"
+        ],
+        "example_source": "Ships within 2 business days."
+      },
+      {
+        "target_lang": "bg",
+        "mt_term": "крепления",
+        "post_edit_term": "автомати",
+        "occurrences": 1,
+        "categories": [
+          "terminology"
+        ],
+        "status": "glossary-not-followed",
+        "glossary_term": "binding",
+        "segments": [
+          "ps-010"
+        ],
+        "example_source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack."
+      },
+      {
+        "target_lang": "bg",
+        "mt_term": "Изпраща се в рамките на",
+        "post_edit_term": "Доставка до",
+        "occurrences": 2,
+        "categories": [
+          "style"
+        ],
+        "status": "new-candidate",
+        "glossary_term": "",
+        "segments": [
+          "ps-022",
+          "ps-027"
+        ],
+        "example_source": "Ships within 2 business days."
+      },
+      {
+        "target_lang": "de",
+        "mt_term": "Belüftungsöffnungen",
+        "post_edit_term": "Lüftungsöffnungen",
+        "occurrences": 1,
+        "categories": [
+          "terminology"
+        ],
+        "status": "new-candidate",
+        "glossary_term": "",
+        "segments": [
+          "ps-013"
+        ],
+        "example_source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs."
+      },
+      {
+        "target_lang": "de",
+        "mt_term": "Lieferung",
+        "post_edit_term": "Versand",
+        "occurrences": 1,
+        "categories": [
+          "terminology"
+        ],
+        "status": "new-candidate",
+        "glossary_term": "",
+        "segments": [
+          "ps-027"
+        ],
+        "example_source": "Ships within 2 business days."
+      }
+    ],
+    "glossary_candidates_file": "outputs/demo/glossary_candidates.csv",
+    "tm_leverage": {
+      "bg": {
+        "segments": 30,
+        "before": {
+          "exact": 3,
+          "fuzzy": 3,
+          "no_match": 24
+        },
+        "after": {
+          "exact": 11,
+          "fuzzy": 2,
+          "no_match": 17
+        }
+      },
+      "de": {
+        "segments": 30,
+        "before": {
+          "exact": 3,
+          "fuzzy": 3,
+          "no_match": 24
+        },
+        "after": {
+          "exact": 10,
+          "fuzzy": 3,
+          "no_match": 17
+        }
+      }
+    }
+  }
+}

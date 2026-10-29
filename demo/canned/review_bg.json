@@ -1,0 +1,51 @@
+{
+  "_comment": "DEMO DATA: canned MQM review findings (bg) for the bundled samples, written by hand. Segments not listed have no findings.",
+  "ps-002": [
+    {
+      "category": "style",
+      "severity": "minor",
+      "explanation": "'Dawn patrol' is surf slang for an early-morning session; the literal paraphrase is wordy.",
+      "suggested_fix": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от ранната сутрешна сесия до залеза."
+    }
+  ],
+  "ps-003": [
+    {
+      "category": "fluency",
+      "severity": "minor",
+      "explanation": "'термо подплата' should be written as one word: 'термоподплата'.",
+      "suggested_fix": "⟦1⟧Основни характеристики:⟦/1⟧ 4/3 мм неопрен на основата на варовик, залепени и скрито зашити шевове и бързосъхнеща термоподплата."
+    }
+  ],
+  "ps-010": [
+    {
+      "category": "terminology",
+      "severity": "major",
+      "explanation": "'крепления' is used for 'bindings'; the glossary requires 'автомати'.",
+      "suggested_fix": "Комбинирай го с нашите ⟦1⟧Lockdown автомати⟦/1⟧ за максимален контрол на кантовете върху твърд сняг."
+    }
+  ],
+  "ps-011": [
+    {
+      "category": "fluency",
+      "severity": "minor",
+      "explanation": "'намазана с вакса' sounds colloquial for product copy.",
+      "suggested_fix": "Синтерована основа, с нанесена вакса и готова за каране веднага след разопаковане."
+    }
+  ],
+  "ps-017": [
+    {
+      "category": "accuracy",
+      "severity": "major",
+      "explanation": "The product type was left in English; only the model name 'Shred 150' should stay in English.",
+      "suggested_fix": "Телескопична колона Shred 150"
+    }
+  ],
+  "ps-019": [
+    {
+      "category": "accuracy",
+      "severity": "critical",
+      "explanation": "The second diameter is wrong (31,8 instead of 31,6 mm); customers buy seat posts by this value.",
+      "suggested_fix": "Съвместима с подседалкови тръби 30,9 мм и 31,6 мм."
+    }
+  ]
+}

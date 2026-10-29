@@ -1,0 +1,150 @@
+{
+  "_comment": "DEMO DATA: canned bg machine translations for the bundled samples (written by hand, with deliberate mistakes for QA to find). A list means [first answer, answer in the repair round].",
+  "ps-001": {
+    "source": "Riptide 4/3 Chest-Zip Wetsuit",
+    "target": "Riptide 4/3 неопренов костюм с цип на гърдите"
+  },
+  "ps-002": {
+    "source": "Built for cold-water sessions, the Riptide 4/3 keeps you warm from dawn patrol to sunset.",
+    "target": "Създаден за сесии в студена вода, Riptide 4/3 те държи на топло от първите вълни на зазоряване до залеза."
+  },
+  "ps-003": {
+    "source": "⟦1⟧Key features:⟦/1⟧ 4/3 mm limestone neoprene, glued and blind-stitched seams and a quick-dry thermal lining.",
+    "target": "⟦1⟧Основни характеристики:⟦/1⟧ 4/3 мм неопрен на основата на варовик, залепени и скрито зашити шевове и бързосъхнеща термо подплата."
+  },
+  "ps-004": {
+    "source": "Water temperature range: 12–16 °C.",
+    "target": "Температурен диапазон на водата: 12–16 °C."
+  },
+  "ps-005": {
+    "source": "Available in sizes XS to XXL.",
+    "target": "Предлага се в размери от XS до XXL."
+  },
+  "ps-007": {
+    "source": "Drift Pro Snowboard",
+    "target": "Сноуборд Drift Pro"
+  },
+  "ps-008": {
+    "source": "A directional twin with camber between the feet and rocker in the nose for effortless float in powder.",
+    "target": "Directional twin с камбър между краката и рокер в носа за лесно плъзгане в пухкав сняг."
+  },
+  "ps-009": {
+    "source": "Recommended rider weight: 70–95 kg.",
+    "target": "Препоръчително тегло на райдъра: 70–95 кг."
+  },
+  "ps-010": {
+    "source": "Pair it with our ⟦1⟧Lockdown bindings⟦/1⟧ for maximum edge control on hardpack.",
+    "target": "Комбинирай го с нашите ⟦1⟧Lockdown крепления⟦/1⟧ за максимален контрол на кантовете върху твърд сняг."
+  },
+  "ps-011": {
+    "source": "Sintered base, waxed and ready to ride out of the box.",
+    "target": "Синтерована основа, намазана с вакса и готова за каране веднага след разопаковане."
+  },
+  "ps-012": {
+    "source": "Trailblazer MIPS Mountain Bike Helmet",
+    "target": "МТБ каска Trailblazer MIPS"
+  },
+  "ps-013": {
+    "source": "Weighs just 340 g and features 18 vents to keep you cool on long climbs.",
+    "target": "Тежи само 340 г и има 18 вентилационни отвора, които те охлаждат при дълги изкачвания."
+  },
+  "ps-014": {
+    "source": "Includes a removable visor and a magnetic Fidlock® buckle.",
+    "target": "Включва сваляща се козирка и магнитна закопчалка Fidlock®."
+  },
+  "ps-015": {
+    "source": "Certified to EN 1078 and CPSC safety standards.",
+    "target": "Сертифицирана по стандартите за безопасност EN 1078 и CPSC."
+  },
+  "ps-016": {
+    "source": "Size {size}: fits head circumference {min}–{max} cm.",
+    "target": "Размер {size}: за обиколка на главата {min}–{max} см."
+  },
+  "ps-017": {
+    "source": "Shred 150 Dropper Post",
+    "target": "Shred 150 Dropper Post"
+  },
+  "ps-018": {
+    "source": "Press the remote lever ⟦1⟧ to drop the saddle by up to 150 mm.",
+    "target": "Натисни дистанционния лост ⟦1⟧, за да спуснеш седалката с до 150 мм."
+  },
+  "ps-019": {
+    "source": "Compatible with 30.9 mm and 31.6 mm seat tubes.",
+    "target": "Съвместима с подседалкови тръби 30,9 мм и 31,8 мм."
+  },
+  "ps-020": {
+    "source": "Service interval: every 200 hours of riding.",
+    "target": "Сервизен интервал: на всеки 200 часа каране."
+  },
+  "ps-021": {
+    "source": "Waterproof rating: 20,000 mm / breathability: 15,000 g/m²/24 h.",
+    "target": "Водоустойчивост: 20 000 мм / дишаемост: 15 000 г/м²/24 ч."
+  },
+  "ps-022": {
+    "source": "Ships within 2 business days.",
+    "target": "Изпраща се в рамките на 2 работни дни."
+  },
+  "ps-023": {
+    "source": "Swell Hunter 6'2\" Shortboard",
+    "target": "Шортборд Swell Hunter 6'2\""
+  },
+  "ps-024": {
+    "source": "Hand-shaped in Portugal with a single-to-double concave for speed and drive through turns.",
+    "target": "Ръчно изработен в Португалия със single-to-double конкейв за скорост и контрол в завоите."
+  },
+  "ps-025": {
+    "source": "Includes FCS II fin boxes; fins sold separately.",
+    "target": "Включва кутии за перки FCS II; перките се продават отделно."
+  },
+  "ps-027": {
+    "source": "Ships within 2 business days.",
+    "target": "Изпраща се в рамките на 2 работни дни."
+  },
+  "ps-028": {
+    "source": "Questions? Our riders are here to help: ⟦1⟧contact support⟦/1⟧.",
+    "target": [
+      "Въпроси? Нашите райдъри са тук, за да помогнат: ⟦1⟧свържи се с поддръжката.",
+      "Въпроси? Нашите райдъри са тук, за да помогнат: ⟦1⟧свържи се с поддръжката⟦/1⟧."
+    ]
+  },
+  "ps-030": {
+    "source": "Ride more. Worry less.",
+    "target": "Карай повече. Мисли по-малко."
+  },
+  "cart.title": {
+    "source": "Your cart",
+    "target": "Твоята количка"
+  },
+  "cart.empty": {
+    "source": "Your cart is empty. Time to gear up!",
+    "target": "Количката ти е празна. Време е за нова екипировка!"
+  },
+  "cart.items": {
+    "source": "{count} items",
+    "target": "{count} продукта"
+  },
+  "cart.checkout": {
+    "source": "Checkout",
+    "target": "Към плащане"
+  },
+  "product.add_to_cart": {
+    "source": "Add to cart",
+    "target": "Добави в количката"
+  },
+  "product.in_stock": {
+    "source": "In stock – ships in {days} days",
+    "target": "В наличност – изпращане до {days} дни"
+  },
+  "product.size_guide": {
+    "source": "Size guide",
+    "target": "Таблица с размери"
+  },
+  "product.reviews": {
+    "source": "{count} rider reviews",
+    "target": "{count} отзива от райдъри"
+  },
+  "promo.banner": {
+    "source": "<b>Summer swell sale:</b> up to 30% off wetsuits",
+    "target": "<b>Лятна разпродажба:</b> до 30% отстъпка за неопренови костюми"
+  }
+}

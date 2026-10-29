@@ -1,0 +1,17 @@
+{
+  "cart": {
+    "title": "Your cart",
+    "empty": "Your cart is empty. Time to gear up!",
+    "items": "{count} items",
+    "checkout": "Checkout"
+  },
+  "product": {
+    "add_to_cart": "Add to cart",
+    "in_stock": "In stock – ships in {days} days",
+    "size_guide": "Size guide",
+    "reviews": "{count} rider reviews"
+  },
+  "promo": {
+    "banner": "<b>Summer swell sale:</b> up to 30% off wetsuits"
+  }
+}

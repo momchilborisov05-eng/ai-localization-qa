@@ -2,6 +2,7 @@
 
 import io
 import json
+import re
 import shutil
 import tempfile
 import unittest
@@ -214,7 +215,9 @@ class DemoEndToEndTests(unittest.TestCase):
     def test_html_report_is_standalone(self):
         html = (self.tmp / "report.html").read_text(encoding="utf-8")
         self.assertNotIn("__REPORT_DATA__", html)
-        self.assertNotIn("<script src", html)
+        # data is embedded; the only external scripts allowed are optional CDN ones (GSAP animation)
+        for src in re.findall(r'<script src="([^"]+)"', html):
+            self.assertTrue(src.startswith("https://cdnjs.cloudflare.com/"), src)
         self.assertIn("Linguist feedback", html)
         self.assertIn('"demo": true', html.replace('"demo":true', '"demo": true'))
 

@@ -1,4 +1,5 @@
-"""JSON and standalone HTML reports (one HTML file, no external assets, works offline)."""
+"""JSON and standalone HTML reports (one HTML file with the data embedded; works offline, and only
+loads web fonts and the optional GSAP animation library from a CDN when online)."""
 
 from __future__ import annotations
 

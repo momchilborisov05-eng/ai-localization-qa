@@ -153,6 +153,14 @@ In German, the QA checks caught *Arbeitstagen* instead of the glossary term *Wer
 
 ![Linguist feedback](examples/screenshot-feedback.png)
 
+### Screenshots
+
+The report uses a dark/light "modern SaaS" design with a theme toggle in the top bar (the choice is remembered; `report.html?theme=light` or `?theme=dark` forces one) and subtle animations. It stays a single HTML file with the data embedded: web fonts and the GSAP animation library load from a CDN when online, and the report works fully without them.
+
+| Light theme | Feedback tab, light | Phone (390 px) |
+|---|---|---|
+| ![Report, light theme](examples/screenshot-report-light.png) | ![Feedback, light theme](examples/screenshot-feedback-light.png) | ![Report on a phone](examples/screenshot-mobile.png) |
+
 ## How it fits a Phrase TMS workflow
 
 The tool is designed around the files a Phrase TMS project produces. It works on exported files and has not been tested against a live Phrase account.

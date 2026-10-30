@@ -1,7 +1,7 @@
 {
   "tool": "AI Localization QA",
   "version": "1.0.0",
-  "generated_at": "2026-10-29 09:52 UTC",
+  "generated_at": "2026-10-29 17:23 UTC",
   "demo": true,
   "model": "demo (canned responses, no API calls)",
   "settings": {
